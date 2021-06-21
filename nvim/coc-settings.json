@@ -1,0 +1,52 @@
+{
+  "coc.preferences.bracketEnterImprove": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "c",
+    "cpp",
+    "python",
+    "json",
+    "cmake",
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "css"
+  ],
+  "coc.preferences.formatOnTypeFiletypes": ["python"],
+  "coc.preferences.formatOnType": true,
+  "diagnostic-languageserver.mergeConfig": true,
+  "diagnostic-languageserver.filetypes": {
+    "python": "pyright",
+    "c/c++": "cpplint",
+    "cmake": "cmake-lint"
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "python": "black",
+    "cmake": "cmake-format"
+  },
+  "diagnostic-languageserver.formatters": {
+    "cmake-format": {
+      "command": "cmake-format",
+      "args": ["%tempfile"],
+      "doesWriteToFile": false
+    }
+  },
+  "diagnostic-languageserver.linters": {
+    "cmake-lint": {
+      "command": "cmake-lint",
+      "args": ["%file"]
+    }
+  },
+  "clangd.path": "/home/neolight1010/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "languageserver": {
+    "graphql": {
+      "command": "graphql-lsp",
+      "args": ["server", "-m", "stream"],
+      "filetypes": ["typescript", "typescriptreact", "graphql"]
+    }
+  },
+  "html.enable": true,
+  "html.filetypes": ["html", "handlebars", "htmldjango", "blade", "django"],
+  "html.format.enable": false
+}
