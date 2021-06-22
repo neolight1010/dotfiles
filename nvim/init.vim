@@ -16,7 +16,7 @@ Plug 'tpope/vim-fugitive'
 " Plug 'sansyrox/vim-python-virtualenv'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'Vimjas/vim-python-pep8-indent'
+" Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tmsvg/pear-tree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'ciaranm/detectindent'
@@ -34,6 +34,17 @@ call plug#end()
 
 " ----------------VIMSPECTOR---------------
 " let g:vimspector_enable_mappings = 'HUMAN'
+nnoremap <Leader>dd :call vimspector#Launch()
+nnoremap <Leader>de :call vimspector#Reset()
+nnoremap <Leader>dr :call vimspector#Restart()
+nnoremap <Leader>dc :call vimspector#Continue() <CR>
+
+nnoremap <Leader>dl :call vimspector#StepInto() <CR>
+nnoremap <Leader>dj :call vimspector#StepOver() <CR>
+nnoremap <Leader>do :call vimspector#StepOut() <CR>
+nnoremap <Leader>drc :call vimspector#RunToCursor() <CR>
+
+nnoremap <Leader>dbp :call vimspector#ToggleBreakpoint() <CR>
 
 " -----------------ULTISNIPS---------------
 let g:UltiSnipsNoMap=1
