@@ -32,6 +32,10 @@ Plug 'mlaursen/vim-react-snippets'
 
 call plug#end()
 
+" ----------------My bindings-----------------
+nnoremap <F5> :CocRestart<CR>
+nnoremap <F7> :Files<CR>
+
 " ----------------VIMSPECTOR---------------
 " let g:vimspector_enable_mappings = 'HUMAN'
 nnoremap <Leader>dd :call vimspector#Launch()
