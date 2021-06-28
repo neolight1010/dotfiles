@@ -48,5 +48,7 @@
   },
   "html.enable": true,
   "html.filetypes": ["html", "handlebars", "htmldjango", "blade", "django"],
-  "html.format.enable": false
+  "html.format.enable": false,
+  "python.linting.mypyEnabled": true,
+  "python.analysis.typeCheckingMode": "basic"
 }
