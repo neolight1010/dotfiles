@@ -27,6 +27,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'SirVer/ultisnips'
 Plug 'jparise/vim-graphql'
+Plug 'neoclide/jsonc.vim'
 
 Plug 'mlaursen/vim-react-snippets'
 
