@@ -78,8 +78,6 @@ plugins=(
 )
 
 ############# TMUX ###############
-export ZSH_TMUX_AUTOSTART=true
-
 source ~/.zplug/init.zsh
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-syntax-highlighting"
