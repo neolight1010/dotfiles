@@ -3,7 +3,6 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "c",
     "cpp",
-    "python",
     "json",
     "cmake",
     "javascript",
@@ -12,8 +11,6 @@
     "html",
     "css"
   ],
-  "coc.preferences.formatOnTypeFiletypes": ["python"],
-  "coc.preferences.formatOnType": true,
   "diagnostic-languageserver.mergeConfig": true,
   "diagnostic-languageserver.filetypes": {
     "python": "pyright",
