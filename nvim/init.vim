@@ -52,8 +52,7 @@ nnoremap <Leader>drc :call vimspector#RunToCursor() <CR>
 nnoremap <Leader>dbp :call vimspector#ToggleBreakpoint() <CR>
 
 " -----------------ULTISNIPS---------------
-let g:UltiSnipsNoMap=1
-let g:UltiSnipsExpandTrigger="NUL"
+let g:UltiSnipsExpandTrigger="<NUL>"
 
 " -----------------PYTHON-------------------
 let g:python3_host_prog = '/home/neolight1010/.pyenv/versions/py3nvim/bin/python'
