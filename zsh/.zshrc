@@ -147,3 +147,4 @@ export BROWSER='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
 export PATH="/mnt/c/Users/ryzen5/AppData/Local/hyper/app-3.0.2/resources/bin/:$PATH"
 export PATH="/mnt/c/windows/:$PATH"
 export PATH="$(yarn global bin):$PATH"
+export PATH="/home/neolight1010/src/arduino-cli/bin/:$PATH"
