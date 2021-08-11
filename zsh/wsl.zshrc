@@ -140,9 +140,15 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # export LIBGL_ALWAYS_INDIRECT=1
 # sudo /etc/init.d/dbus start &> /dev/null
 
+####################### Browser #############################
+export BROWSER='/mnt/c/Program\ Files/Mozilla\ Firefox/firefox.exe'
+
 ######################## Java ######################
 export JAVA_HOME="/home/neolight1010/src/jdk-11.0.11+9"
 
 #################### Others ###################
+export PATH="/mnt/c/Users/ryzen5/AppData/Local/hyper/app-3.0.2/resources/bin/:$PATH"
+export PATH="/mnt/c/windows/:$PATH"
 export PATH="$(yarn global bin):$PATH"
+export PATH="/home/neolight1010/src/arduino-cli/bin/:$PATH"
 export PATH="/home/neolight1010/src/jdk-11.0.11+9/bin/:$PATH"
