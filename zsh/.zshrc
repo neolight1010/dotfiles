@@ -141,8 +141,8 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # sudo /etc/init.d/dbus start &> /dev/null
 
 ######################## Java ######################
-export JAVA_HOME="/home/neolight1010/src/jdk-11.0.11+9"
+export JAVA_HOME="/home/neolight1010/src/jdk-11.0.12+7"
 
 #################### Others ###################
 export PATH="$(yarn global bin):$PATH"
-export PATH="/home/neolight1010/src/jdk-11.0.11+9/bin/:$PATH"
+export PATH="/home/neolight1010/src/jdk-11.0.12+7/bin/:$PATH"
