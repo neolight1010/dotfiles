@@ -44,12 +44,12 @@ nnoremap <Leader>de :call vimspector#Reset()
 nnoremap <Leader>dr :call vimspector#Restart()
 nnoremap <Leader>dc :call vimspector#Continue() <CR>
 
-nnoremap <Leader>dl :call vimspector#StepInto() <CR>
-nnoremap <Leader>dj :call vimspector#StepOver() <CR>
+nnoremap <Leader>dj :call vimspector#StepInto() <CR>
+nnoremap <Leader>dl :call vimspector#StepOver() <CR>
 nnoremap <Leader>do :call vimspector#StepOut() <CR>
 nnoremap <Leader>drc :call vimspector#RunToCursor() <CR>
 
-nnoremap <Leader>dbp :call vimspector#ToggleBreakpoint() <CR>
+nnoremap <Leader>db :call vimspector#ToggleBreakpoint() <CR>
 
 " -----------------ULTISNIPS---------------
 let g:UltiSnipsExpandTrigger="<NUL>"
