@@ -4,7 +4,8 @@
 :set shiftwidth=4
 :set autoindent
 :set smartindent
-" :set mouse=a
+:set mouse=a
+:set termguicolors
 
 call plug#begin('~/.config/nvim/plugged')
 
