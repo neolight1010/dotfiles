@@ -5,7 +5,6 @@
 :set autoindent
 :set smartindent
 :set mouse=a
-:set termguicolors
 
 call plug#begin('~/.config/nvim/plugged')
 
@@ -29,6 +28,7 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'SirVer/ultisnips'
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/jsonc.vim'
+Plug 'wadackel/vim-dogrun'
 
 Plug 'mlaursen/vim-react-snippets'
 
@@ -37,6 +37,11 @@ call plug#end()
 " ----------------My bindings-----------------
 nnoremap <F5> :CocRestart<CR>
 nnoremap <F7> :Files<CR>
+
+" ---------------(color scheme)-------------
+" set background=dark
+set termguicolors
+colorscheme dogrun
 
 " ----------------VIMSPECTOR---------------
 " let g:vimspector_enable_mappings = 'HUMAN'
@@ -75,7 +80,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " ------------------Lightline------------------
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'dogrun',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fugitive', 'readonly', 'filename', 'modified'],
