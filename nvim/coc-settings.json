@@ -8,7 +8,6 @@
     "javascript",
     "typescript",
     "typescriptreact",
-    "html",
     "css"
   ],
   "diagnostic-languageserver.mergeConfig": true,
