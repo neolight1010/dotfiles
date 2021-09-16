@@ -31,6 +31,7 @@ Plug 'neoclide/jsonc.vim'
 Plug 'airblade/vim-gitgutter'
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+Plug 'lervag/vimtex'
 
 Plug 'wadackel/vim-dogrun'
 
