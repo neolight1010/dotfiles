@@ -30,6 +30,8 @@ Plug 'jparise/vim-graphql'
 Plug 'neoclide/jsonc.vim'
 Plug 'airblade/vim-gitgutter'
 
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
+
 Plug 'wadackel/vim-dogrun'
 
 Plug 'mlaursen/vim-react-snippets'
