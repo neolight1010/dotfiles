@@ -120,6 +120,7 @@ export EDITOR='nvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias tmx="tmuxinator"
 
 ############# Deno ################
 export DENO_INSTALL="/home/neolight1010/.deno"
