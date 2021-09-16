@@ -28,6 +28,8 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'SirVer/ultisnips'
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/jsonc.vim'
+Plug 'airblade/vim-gitgutter'
+
 Plug 'wadackel/vim-dogrun'
 
 Plug 'mlaursen/vim-react-snippets'
