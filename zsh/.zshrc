@@ -149,3 +149,7 @@ export JAVA_HOME="/home/neolight1010/src/jdk-11.0.12+7"
 #################### Others ###################
 export PATH="$(yarn global bin):$PATH"
 export PATH="/home/neolight1010/src/jdk-11.0.12+7/bin/:$PATH"
+export PATH="$HOME/.emacs.d/bin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
