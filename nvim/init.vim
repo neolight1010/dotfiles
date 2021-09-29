@@ -6,6 +6,8 @@
 :set smartindent
 :set mouse=a
 
+let g:livepreview_use_biber = 1
+
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'itchyny/lightline.vim'
