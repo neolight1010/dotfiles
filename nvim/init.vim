@@ -23,7 +23,6 @@ Plug 'tmsvg/pear-tree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'ciaranm/detectindent'
 Plug 'tpope/vim-sleuth'
-Plug 'ryanoasis/vim-devicons'
 Plug 'puremourning/vimspector'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -39,6 +38,8 @@ Plug 'wadackel/vim-dogrun'
 
 Plug 'mlaursen/vim-react-snippets'
 
+" Leave vim-devicons at the bottom of plugins!!!
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " ----------------My bindings-----------------
