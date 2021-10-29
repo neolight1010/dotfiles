@@ -72,13 +72,13 @@ ZSH_THEME="refined"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     git
-    nvm
     docker
     tmux
 )
 
 ############# TMUX ###############
 source ~/.zplug/init.zsh
+zplug "lukechilds/zsh-nvm"
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
