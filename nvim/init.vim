@@ -70,7 +70,7 @@ nnoremap <Leader>db :call vimspector#ToggleBreakpoint() <CR>
 let g:UltiSnipsExpandTrigger="<NUL>"
 
 " -----------------PYTHON-------------------
-let g:python3_host_prog = '/home/neolight1010/.pyenv/versions/py3nvim/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 
 " ------------------VIM-DEVICONS-----------
 set encoding=UTF-8
