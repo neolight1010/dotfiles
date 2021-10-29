@@ -30,6 +30,7 @@ Plug 'SirVer/ultisnips'
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/jsonc.vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'dart-lang/dart-vim-plugin'
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
