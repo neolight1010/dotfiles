@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/neolight1010/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -123,7 +123,7 @@ export EDITOR='nvim'
 alias tmx="tmuxinator"
 
 ############# Deno ################
-export DENO_INSTALL="/home/neolight1010/.deno"
+export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 ############## Autojump #################
@@ -145,11 +145,11 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # sudo /etc/init.d/dbus start &> /dev/null
 
 ######################## Java ######################
-export JAVA_HOME="/home/neolight1010/src/jdk-11.0.12+7"
+export JAVA_HOME="$HOME/src/jdk-11.0.12+7"
 
 #################### Others ###################
 export PATH="$(yarn global bin):$PATH"
-export PATH="/home/neolight1010/src/jdk-11.0.12+7/bin/:$PATH"
+export PATH="$HOME/src/jdk-11.0.12+7/bin/:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
