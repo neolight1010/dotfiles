@@ -1,3 +1,13 @@
+## zplug
+curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
+
+exec $SHELL
+
+rm ~/.zshrc
+ln ./zsh/.zshrc ~/.zshrc
+
+source ~/.zshrc
+
 # node
 nvm install --lts
 npm install -g yarn
@@ -20,4 +30,3 @@ rm ~/.config/nvim/coc-settings.json
 ln ./nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 
 nvim --headless +PlugInstall +qa
-

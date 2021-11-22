@@ -37,10 +37,4 @@ chsh -s $(which zsh)
 ## oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-## zplug
-curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-
-rm ~/.zshrc
-ln ./zsh/.zshrc ~/.zshrc
-
 zsh ./restore-scripts/post-zsh.sh
