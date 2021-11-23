@@ -33,7 +33,7 @@
       "args": ["%file"]
     }
   },
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
+  // "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd",
   "typescript.preferences.importModuleSpecifier": "relative",
   "languageserver": {
     "graphql": {
@@ -46,5 +46,7 @@
   "html.filetypes": ["html", "handlebars", "htmldjango", "blade", "django"],
   "html.format.enable": false,
   "python.linting.mypyEnabled": true,
-  "python.analysis.typeCheckingMode": "basic"
+  "python.analysis.typeCheckingMode": "basic",
+
+  "prettier.tabWidth": 4
 }
