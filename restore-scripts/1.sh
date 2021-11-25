@@ -1,21 +1,21 @@
 #!/bin/bash
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 
 # Programs
-sudo apt install curl
-sudo apt install tmux
+sudo apt install curl -y
+sudo apt install tmux -y
 
-sudo apt install zsh
-sudo apt install autojump
+sudo apt install zsh -y
+sudo apt install autojump -y
 
-sudo apt install neovim
-sudo apt install silversearcher-ag
+sudo apt install neovim -y
+sudo apt install silversearcher-ag -y
 
 ## Python build dependencies
 sudo apt-get install make build-essential libssl-dev zlib1g-dev \
 libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
-libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev -y
 
 # tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -28,11 +28,6 @@ ln ./tmux/.tmux.conf ~/.tmux.conf
 
 # python
 curl https://pyenv.run | bash
-pyenv install 3.10.0
-pyenv global 3.10.0
-
-# zsh
-chsh -s $(which zsh)
 
 ## oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
