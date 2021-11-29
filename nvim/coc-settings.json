@@ -48,5 +48,6 @@
   "python.linting.mypyEnabled": true,
   "python.analysis.typeCheckingMode": "basic",
 
-  "prettier.tabWidth": 4
+  "prettier.tabWidth": 4,
+  "svelte.enable-ts-plugin": true
 }

@@ -40,6 +40,8 @@ Plug 'wadackel/vim-dogrun'
 
 Plug 'mlaursen/vim-react-snippets'
 
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
 " Leave vim-devicons at the bottom of plugins!!!
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -52,6 +54,9 @@ nnoremap <F7> :Files<CR>
 " set background=dark
 set termguicolors
 colorscheme dogrun
+
+" ----------------Svelte------------------
+let g:svelte_preprocessors = ['typescript']
 
 " ----------------VIMSPECTOR---------------
 " let g:vimspector_enable_mappings = 'HUMAN'
