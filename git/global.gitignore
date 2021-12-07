@@ -1,0 +1,4 @@
+# Global gitignore
+# Add it using `git config --global core.excludesfile <path>`
+
+.vim/
