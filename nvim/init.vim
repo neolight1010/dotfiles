@@ -50,6 +50,7 @@ call plug#end()
 " ----------------My bindings-----------------
 nnoremap <F5> :CocRestart<CR>
 nnoremap <F7> :Files<CR>
+nnoremap <Leader>cd :CocList diagnostics<CR>
 
 " ---------------(color scheme)-------------
 " set background=dark
