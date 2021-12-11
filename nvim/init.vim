@@ -32,6 +32,7 @@ Plug 'neoclide/jsonc.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'Vimjas/vim-python-pep8-indent'
+Plug 'mracos/mermaid.vim'
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
