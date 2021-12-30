@@ -6,6 +6,10 @@
 :set smartindent
 :set mouse=a
 
+:set foldmethod=syntax
+:set foldlevelstart=99
+:set foldcolumn=2
+
 let g:livepreview_use_biber = 1
 
 call plug#begin('~/.config/nvim/plugged')
