@@ -54,6 +54,7 @@ call plug#end()
 " ----------------My bindings-----------------
 nnoremap <F5> :CocRestart<CR>
 nnoremap <F7> :Files<CR>
+nnoremap <F8> :Ag<CR>
 nnoremap <Leader>cd :CocList diagnostics<CR>
 
 " ---------------(color scheme)-------------
