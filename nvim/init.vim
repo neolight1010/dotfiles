@@ -52,10 +52,15 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " ----------------My bindings-----------------
-nnoremap <F5> :CocRestart<CR>
+nmap <F6> :NERDTreeToggle<CR>
+
 nnoremap <F7> :Files<CR>
 nnoremap <F8> :Ag<CR>
+
 nnoremap <Leader>cd :CocList diagnostics<CR>
+nnoremap <F5> :CocRestart<CR>
+
+nnoremap <Space>d S<Esc>
 
 " ---------------(color scheme)-------------
 " set background=dark
@@ -95,7 +100,6 @@ let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -f -l -g ""'
 let NERDTreeShowHidden=1
 " let NERDTreeQuitOnOpen=1
 let NERDTreeSortHiddenFirst=1
-nmap <F6> :NERDTreeToggle<CR>
 
 " --------------------Prettier---------------------
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
@@ -261,8 +265,6 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
-" Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
