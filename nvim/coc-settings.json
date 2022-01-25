@@ -1,15 +1,5 @@
 {
   "coc.preferences.bracketEnterImprove": true,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "c",
-    "cpp",
-    "json",
-    "cmake",
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "css"
-  ],
   "diagnostic-languageserver.mergeConfig": true,
   "diagnostic-languageserver.filetypes": {
     "python": "pyright",
