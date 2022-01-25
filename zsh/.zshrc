@@ -144,9 +144,6 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # export LIBGL_ALWAYS_INDIRECT=1
 # sudo /etc/init.d/dbus start &> /dev/null
 
-######################## Java ######################
-export JAVA_HOME="$HOME/src/jdk-11.0.12+7"
-
 #################### Others ###################
 export PATH="$(yarn global bin):$PATH"
 export PATH="$HOME/src/jdk-11.0.12+7/bin/:$PATH"
