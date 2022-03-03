@@ -149,9 +149,6 @@ export PATH="$(yarn global bin):$PATH"
 export PATH="$HOME/src/jdk-11.0.12+7/bin/:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
-
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools
