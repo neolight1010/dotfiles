@@ -136,6 +136,9 @@ eval "$(pyenv init --path)"
 
 eval "$(pyenv init -)"
 
+######### rbenv #########3
+eval "$(rbenv init -)"
+
 ############## Poetry ###############
 export PATH="$HOME/.poetry/bin:$PATH"
 
