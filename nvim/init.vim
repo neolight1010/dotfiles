@@ -28,8 +28,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Plug 'ciaranm/detectindent'
 Plug 'tpope/vim-sleuth'
 Plug 'puremourning/vimspector'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
 Plug 'SirVer/ultisnips'
 Plug 'jparise/vim-graphql'
 Plug 'neoclide/jsonc.vim'
@@ -47,6 +45,13 @@ Plug 'mlaursen/vim-react-snippets'
 
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
+Plug 'leafgarland/typescript-vim'
+Plug 'yuezk/vim-js'
+
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'ap/vim-css-color'
+
 " Leave vim-devicons at the bottom of plugins!!!
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
@@ -58,6 +63,7 @@ nnoremap <F7> :Files<CR>
 nnoremap <F8> :Ag<CR>
 
 nnoremap <Leader>cd :CocList diagnostics<CR>
+nnoremap <Leader>cl :CocList 
 nnoremap <F5> :CocRestart<CR>
 
 nnoremap <Space>d S<Esc>
