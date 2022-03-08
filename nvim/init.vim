@@ -9,6 +9,7 @@
 :set foldmethod=syntax
 :set foldlevelstart=99
 :set foldcolumn=2
+:set colorcolumn=80
 
 let g:livepreview_use_biber = 1
 
