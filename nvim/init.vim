@@ -10,7 +10,6 @@
 :set foldlevelstart=99
 :set foldcolumn=2
 :set colorcolumn=80
-:set cursorline
 
 let g:livepreview_use_biber = 1
 
@@ -38,8 +37,6 @@ Plug 'mracos/mermaid.vim'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
 
-Plug 'wadackel/vim-dogrun'
-
 Plug 'mlaursen/vim-react-snippets'
 
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
@@ -52,6 +49,9 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ap/vim-css-color'
 
 Plug 'jxnblk/vim-mdx-js'
+
+" Color schemes
+Plug 'wadackel/vim-dogrun'
 
 " Leave vim-devicons at the bottom of plugins!!!
 Plug 'ryanoasis/vim-devicons'
@@ -71,10 +71,13 @@ nnoremap <Space>d S<Esc>
 " New line below without insert mode
 nnoremap <Space>o o<Esc>
 
-" ---------------(color scheme)-------------
-" set background=dark
+" ---------------Color scheme and theme configs-------------
 set termguicolors
 colorscheme dogrun
+
+:hi clear CursorLine
+:hi CursorLine gui=underline cterm=underline
+:set cursorline
 
 " ----------------Svelte------------------
 let g:svelte_preprocessors = ['typescript']
