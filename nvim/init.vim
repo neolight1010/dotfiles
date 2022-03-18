@@ -10,6 +10,7 @@
 :set foldlevelstart=99
 :set foldcolumn=2
 :set colorcolumn=80
+:set cursorline
 
 let g:livepreview_use_biber = 1
 
@@ -20,13 +21,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'josa42/vim-lightline-coc'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
-" Plug 'sansyrox/vim-python-virtualenv'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'tmsvg/pear-tree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'ciaranm/detectindent'
 Plug 'tpope/vim-sleuth'
 Plug 'puremourning/vimspector'
 Plug 'SirVer/ultisnips'
