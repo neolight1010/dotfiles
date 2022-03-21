@@ -33,6 +33,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'mracos/mermaid.vim'
+Plug 'hashivim/vim-terraform'
 
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 Plug 'lervag/vimtex'
