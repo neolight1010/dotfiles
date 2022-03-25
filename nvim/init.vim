@@ -72,6 +72,9 @@ nnoremap <Space>d S<Esc>
 " New line below without insert mode
 nnoremap <Space>o o<Esc>
 
+nnoremap [g :GitGutterPrevHunk<CR>
+nnoremap ]g :GitGutterNextHunk<CR>
+
 " ---------------Color scheme and theme configs-------------
 set termguicolors
 colorscheme dogrun
