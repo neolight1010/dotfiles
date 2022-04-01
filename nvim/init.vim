@@ -51,6 +51,8 @@ Plug 'ap/vim-css-color'
 
 Plug 'jxnblk/vim-mdx-js'
 
+Plug 'https://github.com/adelarsq/vim-matchit'
+
 " Color schemes
 Plug 'wadackel/vim-dogrun'
 
