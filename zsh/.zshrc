@@ -76,6 +76,9 @@ plugins=(
     tmux
 )
 
+###### OTHERS ############
+export LESS="-RXF"
+
 ############# TMUX ###############
 source ~/.zplug/init.zsh
 zplug "lukechilds/zsh-nvm"
