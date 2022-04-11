@@ -79,12 +79,13 @@ plugins=(
 ###### OTHERS ############
 export LESS="-RXF"
 
-############# TMUX ###############
+############# ZPLUG ###############
 source ~/.zplug/init.zsh
 zplug "lukechilds/zsh-nvm"
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
+zplug "jeffreytse/zsh-vi-mode"
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
