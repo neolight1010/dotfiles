@@ -77,6 +77,8 @@ nnoremap <Space>o o<Esc>
 nnoremap [g :GitGutterPrevHunk<CR>
 nnoremap ]g :GitGutterNextHunk<CR>
 
+nnoremap <Leader>ga :GitGutterStageHunk<CR>
+
 " ---------------Color scheme and theme configs-------------
 set termguicolors
 colorscheme dogrun
