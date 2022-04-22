@@ -78,6 +78,7 @@ nnoremap [g :GitGutterPrevHunk<CR>
 nnoremap ]g :GitGutterNextHunk<CR>
 
 nnoremap <Leader>ga :GitGutterStageHunk<CR>
+nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
