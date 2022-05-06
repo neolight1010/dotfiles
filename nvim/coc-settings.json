@@ -44,6 +44,9 @@
       "rootPatterns": ["elm.json"]
     }
   },
+
+  "codeLens.enable": true,
+
   "html.enable": true,
   "html.filetypes": ["html", "handlebars", "htmldjango", "blade", "django"],
   "html.format.enable": false,
