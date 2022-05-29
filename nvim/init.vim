@@ -54,7 +54,7 @@ Plug 'jxnblk/vim-mdx-js'
 Plug 'https://github.com/adelarsq/vim-matchit'
 
 " Color schemes
-Plug 'wadackel/vim-dogrun'
+Plug 'rafi/awesome-vim-colorschemes'
 
 " Leave vim-devicons at the bottom of plugins!!!
 Plug 'ryanoasis/vim-devicons'
@@ -82,7 +82,7 @@ nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
-colorscheme dogrun
+colorscheme scheakur
 
 :hi clear CursorLine
 :hi CursorLine gui=underline cterm=underline
