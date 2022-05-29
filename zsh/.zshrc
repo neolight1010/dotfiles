@@ -73,6 +73,7 @@ ZSH_THEME="refined"
 plugins=(
     git
     docker
+    ssh-agent
     tmux
 )
 
