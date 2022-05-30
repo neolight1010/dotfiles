@@ -68,6 +68,7 @@ nnoremap <F8> :Ag<CR>
 
 nnoremap <Leader>cd :CocList diagnostics<CR>
 nnoremap <Leader>cl :CocList 
+nnoremap <Leader>ck <Plug>(coc-codelens-action)
 nnoremap <F5> :CocRestart<CR>
 
 nnoremap <Space>d S<Esc>
