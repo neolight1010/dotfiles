@@ -84,9 +84,10 @@ export LESS="-RXF"
 source ~/.zplug/init.zsh
 zplug "lukechilds/zsh-nvm"
 zplug "supercrabtree/k"
-zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "jeffreytse/zsh-vi-mode"
+
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
