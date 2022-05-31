@@ -124,6 +124,9 @@ let NERDTreeShowHidden=1
 " let NERDTreeQuitOnOpen=1
 let NERDTreeSortHiddenFirst=1
 
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
 " --------------------Prettier---------------------
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
