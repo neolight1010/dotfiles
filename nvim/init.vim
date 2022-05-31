@@ -62,6 +62,7 @@ call plug#end()
 
 " ----------------My bindings-----------------
 nmap <F6> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeFind<CR>
 
 nnoremap <F7> :Files<CR>
 nnoremap <F8> :Ag<CR>
