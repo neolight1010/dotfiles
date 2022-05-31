@@ -83,7 +83,7 @@ nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
-colorscheme scheakur
+colorscheme hybrid
 
 :hi clear CursorLine
 :hi CursorLine gui=underline cterm=underline
