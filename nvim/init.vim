@@ -52,6 +52,7 @@ Plug 'ap/vim-css-color'
 Plug 'jxnblk/vim-mdx-js'
 
 Plug 'adelarsq/vim-matchit'
+Plug 'jceb/vim-orgmode'
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
