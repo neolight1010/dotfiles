@@ -19,7 +19,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'josa42/vim-lightline-coc'
 Plug 'preservim/nerdtree'
+
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tmsvg/pear-tree'
