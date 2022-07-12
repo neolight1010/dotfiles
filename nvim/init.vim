@@ -90,6 +90,8 @@ nnoremap <Leader>ga :GitGutterStageHunk<CR>
 nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
 nnoremap <Leader>gu :GitGutterUndoHunk<CR>
 
+nnoremap <Leader>gb :G blame<CR>
+
 " ---------------Color scheme and theme configs-------------
 set termguicolors
 colorscheme hybrid
