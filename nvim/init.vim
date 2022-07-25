@@ -18,7 +18,10 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'josa42/vim-lightline-coc'
+
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -28,7 +31,6 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'tmsvg/pear-tree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-sleuth'
 Plug 'puremourning/vimspector'
 Plug 'SirVer/ultisnips'
