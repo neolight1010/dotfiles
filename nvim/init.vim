@@ -61,6 +61,7 @@ Plug 'jxnblk/vim-mdx-js'
 Plug 'adelarsq/vim-matchit'
 Plug 'jceb/vim-orgmode'
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'Yggdroot/indentLine'
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
