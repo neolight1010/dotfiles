@@ -25,12 +25,6 @@
   },
   "typescript.preferences.importModuleSpecifier": "relative",
   "languageserver": {
-    "graphql": {
-      "command": "graphql-lsp",
-      "args": ["server", "-m", "stream"],
-      "filetypes": ["graphql"]
-    },
-
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
