@@ -85,6 +85,7 @@ nnoremap <F5> :CocRestart<CR>
 nnoremap <Space>d S<Esc>
 " New line below without insert mode
 nnoremap <Space>o o<Esc>
+nnoremap W :w<CR>
 
 nnoremap [c :GitGutterPrevHunk<CR>
 nnoremap ]c :GitGutterNextHunk<CR>
