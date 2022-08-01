@@ -71,6 +71,8 @@ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " ----------------My bindings-----------------
+let mapleader=","
+
 nmap <F6> :NERDTreeToggle<CR>
 nnoremap <C-n> :NERDTreeFind<CR>
 
