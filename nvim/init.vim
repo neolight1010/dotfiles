@@ -19,10 +19,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'josa42/vim-lightline-coc'
 
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'kyazdani42/nvim-web-devicons'
 
@@ -75,9 +71,6 @@ call plug#end()
 
 " ----------------My bindings-----------------
 let mapleader=","
-
-nmap <F6> :NERDTreeToggle<CR>
-nnoremap <C-n> :NERDTreeFind<CR>
 
 nnoremap <F7> :Files<CR>
 nnoremap <F8> :Ag<CR>
@@ -137,14 +130,6 @@ set encoding=UTF-8
 
 " ------------------FZF--------------------
 let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -f -l -g ""'
-
-" -------------------NERDTree------------------
-let NERDTreeShowHidden=1
-" let NERDTreeQuitOnOpen=1
-let NERDTreeSortHiddenFirst=1
-
-" Open the existing NERDTree on each new tab.
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 " ------------- NVIM Tree ----------------
 
