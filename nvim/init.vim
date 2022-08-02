@@ -23,6 +23,9 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-web-devicons'
+
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 
@@ -142,6 +145,26 @@ let NERDTreeSortHiddenFirst=1
 
 " Open the existing NERDTree on each new tab.
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
+" ------------- NVIM Tree ----------------
+
+:lua << EOF
+
+require("nvim-tree").setup({
+    view = {
+        mappings = {
+            list = {
+                { key = "<C-e>", action = "" },
+                { key = ",", action = "edit_in_place" },
+            },
+        },
+    },
+})
+
+EOF
+
+nnoremap <F6> :NvimTreeToggle<CR>
+nnoremap <C-n> :NvimTreeFindFileToggle<CR>
 
 " --------------------Prettier---------------------
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
