@@ -64,6 +64,9 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'glepnir/dashboard-nvim'
 
+Plug 'purescript-contrib/purescript-vim'
+
+
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 
