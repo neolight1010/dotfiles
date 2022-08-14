@@ -62,6 +62,8 @@ Plug 'jceb/vim-orgmode'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Yggdroot/indentLine'
 
+Plug 'glepnir/dashboard-nvim'
+
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 
