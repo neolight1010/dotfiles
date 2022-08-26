@@ -69,6 +69,10 @@ Plug 'purescript-contrib/purescript-vim'
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'xolox/vim-colorscheme-switcher'
+Plug 'xolox/vim-misc'
+
+let g:colorscheme_switcher_define_mappings = 0
 
 " Leave vim-devicons at the bottom of plugins!!!
 Plug 'ryanoasis/vim-devicons'
@@ -98,6 +102,10 @@ nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
 nnoremap <Leader>gu :GitGutterUndoHunk<CR>
 
 nnoremap <Leader>gb :G blame<CR>
+
+nnoremap <silent> <F12> :NextColorScheme<CR>
+nnoremap <silent> <S-F12> :PrevColorScheme<CR>
+nnoremap <silent> <C-F12> :RandomColorScheme<CR>
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
