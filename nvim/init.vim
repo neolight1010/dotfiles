@@ -66,6 +66,7 @@ Plug 'glepnir/dashboard-nvim'
 
 Plug 'purescript-contrib/purescript-vim'
 
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
