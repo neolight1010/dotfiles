@@ -109,7 +109,7 @@ nnoremap <silent> <C-F12> :RandomColorScheme<CR>
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
-colorscheme hybrid
+colorscheme molokai
 
 :hi clear CursorLine
 :hi CursorLine gui=underline cterm=underline
