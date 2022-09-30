@@ -127,6 +127,8 @@ require('nvim-treesitter.configs').setup({
   ensure_installed = { 'python', 'rust', 'typescript', 'javascript' },
   highlight = { enable = true },
   indent = { enable = true },
+
+  markid = { enable = true },
 })
 
 EOF
