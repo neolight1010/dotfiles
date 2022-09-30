@@ -11,6 +11,8 @@
 :set foldcolumn=2
 :set colorcolumn=80
 
+:set laststatus=3
+
 let g:livepreview_use_biber = 1
 
 call plug#begin('~/.config/nvim/plugged')
