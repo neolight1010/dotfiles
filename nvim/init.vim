@@ -69,6 +69,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'purescript-contrib/purescript-vim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'David-Kunz/markid'
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -117,6 +118,18 @@ colorscheme molokai
 :hi clear CursorLine
 :hi CursorLine gui=underline cterm=underline
 :set cursorline
+
+" ----------------TreeSitter---------------
+
+:lua << EOF
+
+require('nvim-treesitter.configs').setup({
+  ensure_installed = { 'python', 'rust', 'typescript', 'javascript' },
+  highlight = { enable = true },
+  indent = { enable = true },
+})
+
+EOF
 
 " ----------------Svelte------------------
 let g:svelte_preprocessors = ['typescript']
