@@ -5,13 +5,14 @@
 :set autoindent
 :set smartindent
 :set mouse=a
-
-:set foldmethod=syntax
 :set foldlevelstart=99
 :set foldcolumn=2
 :set colorcolumn=80
-
 :set laststatus=3
+:set spell
+
+:set foldmethod=expr
+:set foldexpr=nvim_treesitter#foldexpr()
 
 let g:livepreview_use_biber = 1
 
