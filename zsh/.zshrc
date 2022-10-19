@@ -142,8 +142,11 @@ eval "$(pyenv init --path)"
 
 eval "$(pyenv init -)"
 
-######### rbenv #########3
+######### rbenv ##########
 eval "$(rbenv init -)"
+
+######## direnv #########
+eval "$(direnv hook zsh)"
 
 ############## Poetry ###############
 export PATH="$HOME/.poetry/bin:$PATH"
