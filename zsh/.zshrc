@@ -175,3 +175,5 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+[[ -s "/home/neolight1010/.gvm/scripts/gvm" ]] && source "/home/neolight1010/.gvm/scripts/gvm"
