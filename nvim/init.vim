@@ -75,6 +75,9 @@ Plug 'David-Kunz/markid'
 Plug 'nvim-lua/plenary.nvim' " Dependency of typebreak.nvim
 Plug 'nagy135/typebreak.nvim'
 
+Plug 'tpope/vim-repeat'
+Plug 'ggandor/leap.nvim'
+
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -85,6 +88,9 @@ let g:colorscheme_switcher_define_mappings = 0
 " Leave vim-devicons at the bottom of plugins!!!
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+" --------------Leap.nvim------------
+:lua require('leap').add_default_mappings()
 
 " ----------------My bindings-----------------
 let mapleader=","
