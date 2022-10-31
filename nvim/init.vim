@@ -72,6 +72,9 @@ Plug 'purescript-contrib/purescript-vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'David-Kunz/markid'
 
+Plug 'nvim-lua/plenary.nvim' " Dependency of typebreak.nvim
+Plug 'nagy135/typebreak.nvim'
+
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -111,6 +114,8 @@ nnoremap <Leader>gb :G blame<CR>
 nnoremap <silent> <F12> :NextColorScheme<CR>
 nnoremap <silent> <S-F12> :PrevColorScheme<CR>
 nnoremap <silent> <C-F12> :RandomColorScheme<CR>
+
+nnoremap <leader>tb :lua require("typebreak").start()<CR>
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
