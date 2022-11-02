@@ -95,6 +95,8 @@ call plug#end()
 " ----------------My bindings-----------------
 let mapleader=","
 
+nnoremap <Leader>tn :tabnew %<CR>
+
 nnoremap <F7> :Files<CR>
 nnoremap <F8> :Ag<CR>
 
