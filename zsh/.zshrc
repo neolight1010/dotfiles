@@ -134,6 +134,9 @@ alias tmx="tmuxinator"
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
+########### ZOxide ############
+eval "$(zoxide init zsh)"
+
 ############# Pyenv ##############
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
