@@ -1,28 +1,5 @@
 {
   "coc.preferences.bracketEnterImprove": true,
-  "diagnostic-languageserver.mergeConfig": true,
-  "diagnostic-languageserver.filetypes": {
-    "python": "pyright",
-    "c/c++": "cpplint",
-    "cmake": "cmake-lint"
-  },
-  "diagnostic-languageserver.formatFiletypes": {
-    "python": "black",
-    "cmake": "cmake-format"
-  },
-  "diagnostic-languageserver.formatters": {
-    "cmake-format": {
-      "command": "cmake-format",
-      "args": ["%tempfile"],
-      "doesWriteToFile": false
-    }
-  },
-  "diagnostic-languageserver.linters": {
-    "cmake-lint": {
-      "command": "cmake-lint",
-      "args": ["%file"]
-    }
-  },
   "typescript.preferences.importModuleSpecifier": "relative",
   "languageserver": {
     "haskell": {
