@@ -62,6 +62,7 @@ ZSH_THEME="refined"
 export LESS="-RXF"
 
 export NVM_LAZY_LOAD=true
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=("nvim", "ng")
 
 ####### PLUGINS #######
 plugins=(
