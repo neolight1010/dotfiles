@@ -82,5 +82,6 @@
     "reference": "\uf87a",
     "typeParameter": "\uf278",
     "default": "\uf29c"
-  }
+  },
+  "angular.enable-strict-mode-prompt": false
 }
