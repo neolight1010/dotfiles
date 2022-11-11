@@ -103,6 +103,7 @@ export EDITOR='nvim'
 
 ############# Aliases ##########33
 alias tmx="tmuxinator"
+alias j="z"
 
 ############# Deno ################
 export DENO_INSTALL="$HOME/.deno"
