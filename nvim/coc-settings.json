@@ -37,6 +37,12 @@
         "addSpagoSources": true,
         "addNpmPath": true
       }
+    },
+
+    "csharp": {
+      "command": "csharp-ls",
+      "rootPatterns": ["*.csproj", "appsettings.json", "*.sln"],
+      "filetypes": ["cs"]
     }
   },
 
