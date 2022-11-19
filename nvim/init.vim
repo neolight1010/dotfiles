@@ -78,6 +78,9 @@ Plug 'nagy135/typebreak.nvim'
 Plug 'tpope/vim-repeat'
 Plug 'ggandor/leap.nvim'
 
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
