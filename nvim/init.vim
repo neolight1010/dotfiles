@@ -95,39 +95,6 @@ call plug#end()
 " --------------Leap.nvim------------
 :lua require('leap').add_default_mappings()
 
-" ----------------My bindings-----------------
-let mapleader=","
-
-nnoremap <Leader>tn :tabnew %<CR>
-
-nnoremap <F7> :Files<CR>
-nnoremap <F8> :Ag<CR>
-
-nnoremap <Leader>cd :CocList diagnostics<CR>
-nnoremap <Leader>cl :CocList 
-nnoremap <Leader>ck <Plug>(coc-codelens-action)
-nnoremap <F5> :CocRestart<CR>
-
-nnoremap <Space>d S<Esc>
-" New line below without insert mode
-nnoremap <Space>o o<Esc>
-nnoremap W :w<CR>
-
-nnoremap [c :GitGutterPrevHunk<CR>
-nnoremap ]c :GitGutterNextHunk<CR>
-
-nnoremap <Leader>ga :GitGutterStageHunk<CR>
-nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
-nnoremap <Leader>gu :GitGutterUndoHunk<CR>
-
-nnoremap <Leader>gb :G blame<CR>
-
-nnoremap <silent> <F12> :NextColorScheme<CR>
-nnoremap <silent> <S-F12> :PrevColorScheme<CR>
-nnoremap <silent> <C-F12> :RandomColorScheme<CR>
-
-nnoremap <leader>tb :lua require("typebreak").start()<CR>
-
 " ---------------Color scheme and theme configs-------------
 set termguicolors
 colorscheme onehalfdark
@@ -379,3 +346,37 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" ----------------My bindings-----------------
+let mapleader=","
+
+nnoremap <Leader>tn :tabnew %<CR>
+
+nnoremap <F7> :Files<CR>
+nnoremap <F8> :Ag<CR>
+
+nnoremap <Leader>cd :CocList diagnostics<CR>
+nnoremap <Leader>cl :CocList 
+nnoremap <Leader>ck <Plug>(coc-codelens-action)
+nnoremap <F5> :CocRestart<CR>
+
+nnoremap <Space>d S<Esc>
+" New line below without insert mode
+nnoremap <Space>o o<Esc>
+nnoremap W :w<CR>
+
+nnoremap [c :GitGutterPrevHunk<CR>
+nnoremap ]c :GitGutterNextHunk<CR>
+
+nnoremap <Leader>ga :GitGutterStageHunk<CR>
+nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
+nnoremap <Leader>gu :GitGutterUndoHunk<CR>
+
+nnoremap <Leader>gb :G blame<CR>
+
+nnoremap <silent> <F12> :NextColorScheme<CR>
+nnoremap <silent> <S-F12> :PrevColorScheme<CR>
+nnoremap <silent> <C-F12> :RandomColorScheme<CR>
+
+nnoremap <leader>tb :lua require("typebreak").start()<CR>
+
