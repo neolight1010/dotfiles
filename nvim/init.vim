@@ -351,6 +351,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 let mapleader=","
 
 nnoremap <Leader>tn :tabnew %<CR>
+imap kj <Esc>
 
 nnoremap <F7> :Files<CR>
 nnoremap <F8> :Ag<CR>
@@ -379,4 +380,3 @@ nnoremap <silent> <S-F12> :PrevColorScheme<CR>
 nnoremap <silent> <C-F12> :RandomColorScheme<CR>
 
 nnoremap <leader>tb :lua require("typebreak").start()<CR>
-
