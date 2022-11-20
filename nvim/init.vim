@@ -130,7 +130,7 @@ nnoremap <leader>tb :lua require("typebreak").start()<CR>
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
-colorscheme deep-space
+colorscheme onehalfdark
 
 :hi clear CursorLine
 :hi CursorLine gui=underline cterm=underline
