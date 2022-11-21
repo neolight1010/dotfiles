@@ -62,7 +62,10 @@ Plug 'jxnblk/vim-mdx-js'
 
 Plug 'adelarsq/vim-matchit'
 Plug 'jceb/vim-orgmode'
+
 Plug 'christoomey/vim-tmux-navigator'
+Plug 'knubie/vim-kitty-navigator', {'do': 'cp ./*.py ~/.config/kitty/'}
+
 Plug 'Yggdroot/indentLine'
 
 Plug 'glepnir/dashboard-nvim'
