@@ -269,13 +269,6 @@ endfunction
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-
-" Formatting selected code.
-xmap <leader>f <Plug>(coc-format-selected)
-nmap <leader>f :Format<Enter>
-
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
@@ -359,10 +352,16 @@ imap kj <Esc>
 nnoremap <F7> :Files<CR>
 nnoremap <F8> :Ag<CR>
 
+" CoC mappings
 nnoremap <Leader>cd :CocList diagnostics<CR>
 nnoremap <Leader>cl :CocList 
 nnoremap <Leader>ck <Plug>(coc-codelens-action)
 nnoremap <F5> :CocRestart<CR>
+
+xmap <leader>f <Plug>(coc-format-selected)
+nmap <leader>f :Format<Enter>
+
+nmap <leader>rn <Plug>(coc-rename)
 
 nnoremap <Space>d S<Esc>
 " New line below without insert mode
