@@ -125,20 +125,6 @@ let g:db_ui_use_nerd_fonts = 1
 " ----------------Svelte------------------
 let g:svelte_preprocessors = ['typescript']
 
-" ----------------VIMSPECTOR---------------
-" let g:vimspector_enable_mappings = 'HUMAN'
-nnoremap <Leader>dd :call vimspector#Launch()
-nnoremap <Leader>de :call vimspector#Reset()
-nnoremap <Leader>dr :call vimspector#Restart()
-nnoremap <Leader>dc :call vimspector#Continue() <CR>
-
-nnoremap <Leader>dj :call vimspector#StepInto() <CR>
-nnoremap <Leader>dl :call vimspector#StepOver() <CR>
-nnoremap <Leader>do :call vimspector#StepOut() <CR>
-nnoremap <Leader>drc :call vimspector#RunToCursor() <CR>
-
-nnoremap <Leader>db :call vimspector#ToggleBreakpoint() <CR>
-
 " -----------------ULTISNIPS---------------
 let g:UltiSnipsExpandTrigger="<NUL>"
 
@@ -327,7 +313,21 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Mappings for CoCList
+" ----------------My bindings-----------------
+let mapleader=","
+
+nnoremap <Leader>tn :tabnew %<CR>
+imap kj <Esc>
+
+nnoremap <F7> :Files<CR>
+nnoremap <F8> :Ag<CR>
+
+" CoC mappings
+nnoremap <Leader>cd :CocList diagnostics<CR>
+nnoremap <Leader>cl :CocList 
+nnoremap <Leader>ck <Plug>(coc-codelens-action)
+nnoremap <F5> :CocRestart<CR>
+
 " Manage extensions.
 nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
@@ -343,20 +343,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" ----------------My bindings-----------------
-let mapleader=","
-
-nnoremap <Leader>tn :tabnew %<CR>
-imap kj <Esc>
-
-nnoremap <F7> :Files<CR>
-nnoremap <F8> :Ag<CR>
-
-" CoC mappings
-nnoremap <Leader>cd :CocList diagnostics<CR>
-nnoremap <Leader>cl :CocList 
-nnoremap <Leader>ck <Plug>(coc-codelens-action)
-nnoremap <F5> :CocRestart<CR>
 
 xmap <leader>f <Plug>(coc-format-selected)
 nmap <leader>f :Format<Enter>
@@ -382,3 +368,17 @@ nnoremap <silent> <S-F12> :PrevColorScheme<CR>
 nnoremap <silent> <C-F12> :RandomColorScheme<CR>
 
 nnoremap <leader>tb :lua require("typebreak").start()<CR>
+
+" Vimspector
+" let g:vimspector_enable_mappings = 'HUMAN'
+nnoremap <Leader>dd :call vimspector#Launch()
+nnoremap <Leader>de :call vimspector#Reset()
+nnoremap <Leader>dr :call vimspector#Restart()
+nnoremap <Leader>dc :call vimspector#Continue() <CR>
+
+nnoremap <Leader>dj :call vimspector#StepInto() <CR>
+nnoremap <Leader>dl :call vimspector#StepOver() <CR>
+nnoremap <Leader>do :call vimspector#StepOut() <CR>
+nnoremap <Leader>drc :call vimspector#RunToCursor() <CR>
+
+nnoremap <Leader>db :call vimspector#ToggleBreakpoint() <CR>
