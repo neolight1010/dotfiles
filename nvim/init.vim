@@ -83,6 +83,8 @@ Plug 'ggandor/leap.nvim'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 
+Plug 'gen740/SmoothCursor.nvim'
+
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -94,16 +96,23 @@ let g:colorscheme_switcher_define_mappings = 0
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
+" -------------SmoothCursor-------------
+:lua << EOF
+
+require('smoothcursor').setup({
+  fancy = {
+      enable = true,
+  }
+})
+
+EOF
+
 " --------------Leap.nvim------------
 :lua require('leap').add_default_mappings()
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
 colorscheme onehalfdark
-
-:hi clear CursorLine
-:hi CursorLine gui=underline cterm=underline
-:set cursorline
 
 " ----------------TreeSitter---------------
 
