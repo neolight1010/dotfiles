@@ -11,6 +11,8 @@
 :set laststatus=3
 :set spell
 
+:set scrolloff=5
+
 :set foldmethod=expr
 :set foldexpr=nvim_treesitter#foldexpr()
 
