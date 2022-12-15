@@ -36,6 +36,11 @@ export LESS="-RXF"
 export NVM_LAZY_LOAD=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=("nvim" "ng")
 
+########### ZSH Vi Mode #########
+function zvm_config() {
+    ZVM_VI_INSERT_ESCAPE_BINDKEY=kj
+}
+
 ####### PLUGINS #######
 plugins=(
     git
