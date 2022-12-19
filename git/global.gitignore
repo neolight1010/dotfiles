@@ -4,3 +4,4 @@
 .vim/
 .python-version
 .ignore
+.envrc
