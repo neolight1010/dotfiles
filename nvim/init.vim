@@ -212,6 +212,9 @@ require("nvim-tree").setup({
             list = {
                 { key = "<C-e>", action = "" },
                 { key = ",", action = "edit_in_place" },
+
+                { key = "<C-t>", action = "" },
+                { key = "t", action = "tabnew" },
             },
         },
     },
