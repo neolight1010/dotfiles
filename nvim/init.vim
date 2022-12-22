@@ -120,6 +120,14 @@ db.custom_center = {
     icon = " ",
     icon_hl = { fg = "#04c1d2" }
   },
+
+  {
+    desc = "Explore",
+    action = 'execute "NvimTreeFocus" | only',
+    icon = " ",
+    icon_hl = { fg = "#04c1d2" }
+  },
+
   {
     desc = "Find file",
     action = "Files",
