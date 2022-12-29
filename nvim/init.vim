@@ -378,7 +378,7 @@ nnoremap <Leader>tn :tabnew %<CR>
 imap kj <Esc>
 
 nnoremap <F7> :Files<CR>
-nnoremap <F8> :Ag<CR>
+nnoremap <F8> :Rg<CR>
 
 " CoC mappings
 nnoremap <Leader>cd :CocList diagnostics<CR>
