@@ -375,6 +375,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 let mapleader=","
 
 nnoremap <Leader>tn :tabnew %<CR>
+nnoremap <Leader>n :noh<CR>
 imap kj <Esc>
 
 nnoremap <F7> :Files<CR>
