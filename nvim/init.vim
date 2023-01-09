@@ -87,6 +87,8 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 
 Plug 'gen740/SmoothCursor.nvim'
 
+Plug 'github/copilot.vim'
+
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -452,3 +454,6 @@ nnoremap <Leader>do :call vimspector#StepOut() <CR>
 nnoremap <Leader>drc :call vimspector#RunToCursor() <CR>
 
 nnoremap <Leader>db :call vimspector#ToggleBreakpoint() <CR>
+
+imap <silent><script><expr> <C-Space> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
