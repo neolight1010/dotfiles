@@ -235,13 +235,18 @@ let g:lightline = {
       \ 'colorscheme': 'dogrun',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fugitive', 'readonly', 'filename', 'modified'],
+      \             [ 'readonly', 'filename', 'modified', 'current_function'],
       \             [ 'coc_ok', 'coc_errors', 'coc_warnings', 'coc_status']]
       \ },
       \ 'component_function': {
-      \   'fugitive': 'FugitiveStatusline'
+      \   'fugitive': 'FugitiveStatusline',
+      \   'current_function': 'CurrentFunction'
       \ },
       \ }
+
+function! CurrentFunction()
+  return get(b:, 'coc_current_function', '')
+endfunction
 
 call lightline#coc#register()
 

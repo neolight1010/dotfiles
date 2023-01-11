@@ -1,5 +1,7 @@
 {
   "coc.preferences.bracketEnterImprove": true,
+  "coc.preferences.currentFunctionSymbolAutoUpdate": true,
+
   "typescript.preferences.importModuleSpecifier": "relative",
   "languageserver": {
     "haskell": {
