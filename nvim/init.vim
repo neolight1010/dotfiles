@@ -460,5 +460,5 @@ nnoremap <Leader>drc :call vimspector#RunToCursor() <CR>
 
 nnoremap <Leader>db :call vimspector#ToggleBreakpoint() <CR>
 
-imap <silent><script><expr> <C-Space> copilot#Accept("\<CR>")
+imap <silent><script><expr> <C-l> copilot#Accept("")
 let g:copilot_no_tab_map = v:true
