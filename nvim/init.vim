@@ -65,8 +65,6 @@ Plug 'jxnblk/vim-mdx-js'
 Plug 'adelarsq/vim-matchit'
 Plug 'jceb/vim-orgmode'
 
-Plug 'christoomey/vim-tmux-navigator'
-
 Plug 'Yggdroot/indentLine'
 
 Plug 'glepnir/dashboard-nvim'
@@ -87,7 +85,7 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 
 Plug 'gen740/SmoothCursor.nvim'
 
-Plug 'github/copilot.vim'
+Plug 'Exafunction/codeium.vim'
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -460,5 +458,8 @@ nnoremap <Leader>drc :call vimspector#RunToCursor() <CR>
 
 nnoremap <Leader>db :call vimspector#ToggleBreakpoint() <CR>
 
-imap <silent><script><expr> <C-l> copilot#Accept("")
-let g:copilot_no_tab_map = v:true
+let g:codeium_disable_bindings = 1
+imap <silent><script><expr> <C-l> codeium#Accept()
+imap <silent><script><expr> <C-;> codeium#CycleCompletions(1)
+imap <silent><script><expr> <C-,> codeium#CycleCompletions(-1)
+imap <silent><script><expr> <C-x> codeium#Clear()
