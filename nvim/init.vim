@@ -69,9 +69,6 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'purescript-contrib/purescript-vim'
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'David-Kunz/markid'
-
 Plug 'nvim-lua/plenary.nvim' " Dependency of typebreak.nvim
 Plug 'nagy135/typebreak.nvim'
 
@@ -113,19 +110,6 @@ EOF
 " ---------------Color scheme and theme configs-------------
 set termguicolors
 colorscheme onehalfdark
-
-" ----------------TreeSitter---------------
-
-:lua << EOF
-
-require('nvim-treesitter.configs').setup({
-  ensure_installed = { 'python', 'rust', 'typescript', 'javascript' },
-  highlight = { enable = true },
-
-  markid = { enable = true },
-})
-
-EOF
 
 " -------------- DBUI -----------------
 let g:db_ui_use_nerd_fonts = 1
