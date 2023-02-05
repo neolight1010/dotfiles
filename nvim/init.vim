@@ -67,8 +67,6 @@ Plug 'jceb/vim-orgmode'
 
 Plug 'Yggdroot/indentLine'
 
-Plug 'glepnir/dashboard-nvim'
-
 Plug 'purescript-contrib/purescript-vim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
@@ -97,61 +95,6 @@ let g:colorscheme_switcher_define_mappings = 0
 " Leave vim-devicons at the bottom of plugins!!!
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
-
-" ----------- dashboard.nvim --------------
-
-:lua << EOF
-
-local db = require('dashboard')
-local home = os.getenv('HOME')
-
-db.preview_file_path = home .. '/.config/nvim/static/02.png'
-db.preview_command = "viu -w 30 -h 15 -t"
-db.preview_file_width = 30
-db.preview_file_height = 15
-
-db.custom_footer = { "Any fool can write code that a computer can understand 💻" }
-db.footer_pad = 2
-
-db.custom_center = {
-  {
-    desc = "New file",
-    action = "DashboardNewFile",
-    icon = " ",
-    icon_hl = { fg = "#04c1d2" }
-  },
-
-  {
-    desc = "Explore",
-    action = 'execute "NvimTreeFocus" | only',
-    icon = " ",
-    icon_hl = { fg = "#04c1d2" }
-  },
-
-  {
-    desc = "Find file",
-    action = "Files",
-    icon = " ",
-    icon_hl = { fg = "#04c1d2" }
-  },
-
-  {
-    desc = "Find content",
-    action = "Rg",
-    icon = " ",
-    icon_hl = { fg = "#04c1d2" }
-  },
-
-  {
-    desc = "Start DBUI",
-    action = "DBUI",
-    icon = " ",
-    icon_hl = { fg = "#04c1d2" }
-  },
-}
-
-EOF
-
 
 " -------------SmoothCursor-------------
 :lua << EOF
