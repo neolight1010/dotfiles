@@ -51,10 +51,11 @@ plugins=(
 
 source ~/.zplug/init.zsh
 zplug "lukechilds/zsh-nvm"
+zplug "mattberther/zsh-pyenv"
+
 zplug "supercrabtree/k"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "jeffreytse/zsh-vi-mode"
-
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 if ! zplug check --verbose; then
