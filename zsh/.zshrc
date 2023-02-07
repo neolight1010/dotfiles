@@ -47,6 +47,7 @@ plugins=(
     docker
     ssh-agent
     tmux
+    z
 )
 
 source ~/.zplug/init.zsh
