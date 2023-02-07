@@ -6,7 +6,7 @@ bindkey -v
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="refined"
+# ZSH_THEME="refined"
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
@@ -129,3 +129,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 [[ -s "/home/neolight1010/.gvm/scripts/gvm" ]] && source "/home/neolight1010/.gvm/scripts/gvm"
+
+#### Starship ####
+eval "$(starship init zsh)"
