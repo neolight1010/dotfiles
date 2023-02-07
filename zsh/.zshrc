@@ -91,13 +91,6 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 ########### ZOxide ############
 eval "$(zoxide init zsh)"
 
-############# Pyenv ##############
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-
-eval "$(pyenv init -)"
-
 ######### rbenv ##########
 eval "$(rbenv init -)"
 
