@@ -90,9 +90,6 @@ alias k="ls"
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-######### rbenv ##########
-eval "$(rbenv init -)"
-
 ######## direnv #########
 eval "$(direnv hook zsh)"
 
