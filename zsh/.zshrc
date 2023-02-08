@@ -90,9 +90,6 @@ alias k="ls"
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
-########### ZOxide ############
-eval "$(zoxide init zsh)"
-
 ######### rbenv ##########
 eval "$(rbenv init -)"
 
