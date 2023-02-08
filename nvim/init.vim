@@ -305,6 +305,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " ----------------My bindings-----------------
 let mapleader=","
+let maplocalleader="\\"
 
 nnoremap <Leader>tn :tabnew %<CR>
 nnoremap <Leader>n :noh<CR>
