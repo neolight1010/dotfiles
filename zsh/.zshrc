@@ -54,8 +54,7 @@ plugins=(
 source ~/.zplug/init.zsh
 zplug "lukechilds/zsh-nvm"
 zplug "mattberther/zsh-pyenv"
-
-zplug "supercrabtree/k"
+zplug "ptavares/zsh-exa"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "jeffreytse/zsh-vi-mode"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
@@ -84,6 +83,8 @@ export EDITOR='nvim'
 ############# Aliases ##########33
 alias tmx="tmuxinator"
 alias j="z"
+alias ls="exa"
+alias k="ls"
 
 ############# Deno ################
 export DENO_INSTALL="$HOME/.deno"
