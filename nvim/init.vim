@@ -324,6 +324,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " ---------- Conjure -----------
 let g:conjure#mapping#doc_word = "<localleader>k"
+let g:conjure#filetypes = ["clojure"]
 
 " ----------------My bindings-----------------
 let mapleader=","
