@@ -82,6 +82,8 @@ Plug 'gen740/SmoothCursor.nvim'
 
 Plug 'Exafunction/codeium.vim'
 
+Plug 'Olical/conjure'
+
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -302,6 +304,9 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" ---------- Conjure -----------
+let g:conjure#mapping#doc_word = "<localleader>k"
 
 " ----------------My bindings-----------------
 let mapleader=","
