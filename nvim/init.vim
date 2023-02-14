@@ -111,7 +111,7 @@ EOF
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
-colorscheme onehalfdark
+colorscheme sonokai
 
 " -------------- DBUI -----------------
 let g:db_ui_use_nerd_fonts = 1
