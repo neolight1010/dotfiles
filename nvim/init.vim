@@ -32,8 +32,6 @@ Plug 'tpope/vim-surround'
 
 Plug 'editorconfig/editorconfig-vim'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
 Plug 'tmsvg/pear-tree'
 Plug 'tpope/vim-sleuth'
 Plug 'puremourning/vimspector'
@@ -69,8 +67,9 @@ Plug 'Yggdroot/indentLine'
 
 Plug 'purescript-contrib/purescript-vim'
 
-Plug 'nvim-lua/plenary.nvim' " Dependency of typebreak.nvim
+Plug 'nvim-lua/plenary.nvim' " Dependency of typebreak and telescope
 Plug 'nagy135/typebreak.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 
 Plug 'tpope/vim-repeat'
 Plug 'ggandor/leap.nvim'
@@ -334,8 +333,11 @@ nnoremap <Leader>tn :tabnew %<CR>
 nnoremap <Leader>n :noh<CR>
 imap kj <Esc>
 
-nnoremap <F7> :Files<CR>
-nnoremap <F8> :Rg<CR>
+" Telescope mappings
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " CoC mappings
 nnoremap <Leader>cd :CocList diagnostics<CR>
