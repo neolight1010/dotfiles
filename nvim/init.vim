@@ -139,7 +139,7 @@ require("nvim-tree").setup({
         mappings = {
             list = {
                 { key = "<C-e>", action = "" },
-                { key = ",", action = "edit_in_place" },
+                { key = "O", action = "edit_in_place" },
 
                 { key = "<C-t>", action = "" },
                 { key = "t", action = "tabnew" },
