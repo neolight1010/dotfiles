@@ -83,6 +83,8 @@ Plug 'Exafunction/codeium.vim'
 
 Plug 'Olical/conjure'
 
+Plug 'fedepujol/move.nvim'
+
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -330,7 +332,7 @@ let mapleader=","
 let maplocalleader="\\"
 
 nnoremap <Leader>tn :tabnew %<CR>
-nnoremap <Leader>n :noh<CR>
+nnoremap <Leader>n <Cmd>nohlsearch\|diffupdate\|redraw<CR>
 imap kj <Esc>
 
 " Telescope mappings
@@ -416,3 +418,15 @@ imap <silent><script><expr> <C-l> codeium#Accept()
 imap <silent><script><expr> <C-;> codeium#CycleCompletions(1)
 imap <silent><script><expr> <C-,> codeium#CycleCompletions(-1)
 imap <silent><script><expr> <C-x> codeium#Clear()
+
+" Normal-mode commands
+nnoremap <silent> <C-j> :MoveLine(1)<CR>
+nnoremap <silent> <C-k> :MoveLine(-1)<CR>
+nnoremap <silent> <C-l> :MoveHChar(1)<CR>
+nnoremap <silent> <C-h> :MoveHChar(-1)<CR>
+
+" Visual-mode commaCds
+vnoremap <silent> <C-j> :MoveBlock(1)<CR>
+vnoremap <silent> <C-k> :MoveBlock(-1)<CR>
+vnoremap <silent> <C-l> :MoveHBlock(1)<CR>
+vnoremap <silent> <C-h> :MoveHBlock(-1)<CR>
