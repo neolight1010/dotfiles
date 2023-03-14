@@ -362,6 +362,7 @@ xmap <leader>f <Plug>(coc-format-selected)
 nmap <leader>f :Format<Enter>
 
 nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>rr <Cmd>call CocAction('refactor')<CR>
 
 nnoremap <Space>d S<Esc>
 
