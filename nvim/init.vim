@@ -13,9 +13,6 @@
 
 :set scrolloff=5
 
-:set foldmethod=expr
-:set foldexpr=nvim_treesitter#foldexpr()
-
 let g:livepreview_use_biber = 1
 
 call plug#begin('~/.config/nvim/plugged')
@@ -78,8 +75,6 @@ Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 
 Plug 'gen740/SmoothCursor.nvim'
-
-Plug 'Exafunction/codeium.vim'
 
 Plug 'Olical/conjure'
 
@@ -412,12 +407,6 @@ nnoremap <Leader>do :call vimspector#StepOut() <CR>
 nnoremap <Leader>drc :call vimspector#RunToCursor() <CR>
 
 nnoremap <Leader>db :call vimspector#ToggleBreakpoint() <CR>
-
-let g:codeium_disable_bindings = 1
-imap <silent><script><expr> <C-l> codeium#Accept()
-imap <silent><script><expr> <C-;> codeium#CycleCompletions(1)
-imap <silent><script><expr> <C-,> codeium#CycleCompletions(-1)
-imap <silent><script><expr> <C-x> codeium#Clear()
 
 " Normal-mode commands
 nnoremap <silent> <C-j> :MoveLine(1)<CR>
