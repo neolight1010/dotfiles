@@ -75,10 +75,10 @@ Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 
 Plug 'gen740/SmoothCursor.nvim'
-
 Plug 'Olical/conjure'
-
 Plug 'fedepujol/move.nvim'
+Plug 'github/copilot.vim'
+
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -415,8 +415,12 @@ nnoremap <silent> <C-k> :MoveLine(-1)<CR>
 nnoremap <silent> <C-l> :MoveHChar(1)<CR>
 nnoremap <silent> <C-h> :MoveHChar(-1)<CR>
 
-" Visual-mode commaCds
+" Visual-mode commands
 vnoremap <silent> <C-j> :MoveBlock(1)<CR>
 vnoremap <silent> <C-k> :MoveBlock(-1)<CR>
 vnoremap <silent> <C-l> :MoveHBlock(1)<CR>
 vnoremap <silent> <C-h> :MoveHBlock(-1)<CR>
+
+" Copilot
+imap <silent><script><expr> <C-l> copilot#Accept("")
+let g:copilot_no_tab_map = v:true
