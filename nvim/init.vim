@@ -330,6 +330,10 @@ nnoremap <Leader>tn :tabnew %<CR>
 nnoremap <Leader>n <Cmd>nohlsearch\|diffupdate\|redraw<CR>
 imap kj <Esc>
 
+" New line below without insert mode
+nnoremap <Space>o o<Esc>
+nnoremap W :w<CR>
+
 " Telescope mappings
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
@@ -376,10 +380,7 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
-" New line below without insert mode
-nnoremap <Space>o o<Esc>
-nnoremap W :w<CR>
-
+" GitGutter mappings
 nnoremap [c :GitGutterPrevHunk<CR>
 nnoremap ]c :GitGutterNextHunk<CR>
 
@@ -387,8 +388,11 @@ nnoremap <Leader>ga :GitGutterStageHunk<CR>
 nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
 nnoremap <Leader>gu :GitGutterUndoHunk<CR>
 
+nnoremap <Leader>G :G 
+nnoremap <Leader>gs :G<CR>
 nnoremap <Leader>gb :G blame<CR>
 
+" Colorscheme mappings
 nnoremap <silent> <F12> :NextColorScheme<CR>
 nnoremap <silent> <S-F12> :PrevColorScheme<CR>
 nnoremap <silent> <C-F12> :RandomColorScheme<CR>
