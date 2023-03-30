@@ -10,8 +10,8 @@
 :set colorcolumn=80
 :set laststatus=3
 :set spell
-
 :set scrolloff=5
+:set path+=**
 
 let g:livepreview_use_biber = 1
 
@@ -78,7 +78,7 @@ Plug 'gen740/SmoothCursor.nvim'
 Plug 'Olical/conjure'
 Plug 'fedepujol/move.nvim'
 Plug 'github/copilot.vim'
-
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -90,6 +90,17 @@ let g:colorscheme_switcher_define_mappings = 0
 " Leave vim-devicons at the bottom of plugins!!!
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+" -------------Treesitter-------------
+: lua << EOF
+
+require('nvim-treesitter.configs').setup({
+  highlight = {
+    enable = true,
+  },
+})
+
+EOF
 
 " -------------SmoothCursor-------------
 :lua << EOF
