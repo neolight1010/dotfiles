@@ -34,7 +34,7 @@ HIST_STAMPS="mm/dd/yyyy"
 export LESS="-RXF"
 
 export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=("nvim" "ng")
+export NVM_LAZY_LOAD_EXTRA_COMMANDS=("nvim" "ng" "helix")
 
 ########### ZSH Vi Mode #########
 function zvm_config() {
