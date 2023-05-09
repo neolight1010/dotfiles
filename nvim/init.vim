@@ -332,6 +332,8 @@ let maplocalleader="\\"
 nnoremap <Leader>tn :tabnew %<CR>
 nnoremap <Leader>n <Cmd>nohlsearch\|diffupdate\|redraw<CR>
 imap kj <Esc>
+nnoremap [b <Cmd>bprevious<CR>
+nnoremap ]b <Cmd>bnext<CR>
 
 " New line below without insert mode
 nnoremap <Space>o o<Esc>
