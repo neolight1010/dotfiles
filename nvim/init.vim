@@ -401,10 +401,10 @@ nnoremap <Space>o o<Esc>
 nnoremap W :w<CR>
 
 " Telescope mappings
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <Space>f <cmd>Telescope find_files<cr>
+nnoremap <Space>g <cmd>Telescope live_grep<cr>
+nnoremap <Space>b <cmd>Telescope buffers<cr>
+nnoremap <Space>h <cmd>Telescope help_tags<cr>
 
 " CoC mappings
 nnoremap <Leader>cd :CocList diagnostics<CR>
@@ -431,7 +431,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 xmap <leader>f <Plug>(coc-format-selected)
 nmap <leader>f :Format<Enter>
 
-nmap <leader>rn <Plug>(coc-rename)
+nmap <Space>r <Plug>(coc-rename)
 nmap <leader>rr <Cmd>call CocAction('refactor')<CR>
 
 nnoremap <Space>d S<Esc>
