@@ -80,6 +80,7 @@ Plug 'Olical/conjure'
 Plug 'fedepujol/move.nvim'
 Plug 'github/copilot.vim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'Bekaboo/deadcolumn.nvim'
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
