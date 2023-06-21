@@ -86,6 +86,8 @@ alias j="z"
 alias ls="exa"
 alias k="ls"
 
+alias copyq="flatpak run com.github.hluk.copyq"
+
 ############# Deno ################
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
