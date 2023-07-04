@@ -84,6 +84,7 @@ Plug 'Bekaboo/deadcolumn.nvim'
 
 " Color schemes
 Plug 'rafi/awesome-vim-colorschemes'
+Plug 'Everblush/nvim'
 Plug 'xolox/vim-colorscheme-switcher'
 Plug 'xolox/vim-misc'
 
@@ -120,7 +121,7 @@ EOF
 
 " ---------------Color scheme and theme configs-------------
 set termguicolors
-colorscheme challenger_deep
+colorscheme everblush
 
 " -------------- DBUI -----------------
 let g:db_ui_use_nerd_fonts = 1
@@ -245,7 +246,7 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " ------------------Lightline------------------
 let g:lightline = {
-      \ 'colorscheme': 'dogrun',
+      \ 'colorscheme': 'everblush',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'readonly', 'filename', 'modified', 'current_function'],
