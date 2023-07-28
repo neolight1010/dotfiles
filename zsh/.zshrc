@@ -123,6 +123,8 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PNPM_HOME="/home/neolight1010/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 
+export PATH="$PATH:$HOME/.dotnet/tools"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
