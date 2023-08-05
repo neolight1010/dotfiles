@@ -120,6 +120,7 @@ EOF
 : lua << EOF
 
 require('mini.files').setup()
+require('mini.animate').setup()
 
 EOF
 
