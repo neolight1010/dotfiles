@@ -1,20 +1,25 @@
-:set number relativenumber
-:set expandtab
-:set tabstop=4
-:set shiftwidth=4
-:set autoindent
-:set smartindent
-:set mouse=a
-:set foldlevelstart=99
-:set foldcolumn=2
-:set colorcolumn=80
-:set laststatus=3
-:set spell
-:set scrolloff=5
-:set path+=**
-set signcolumn=auto
+:lua << EOF
 
-let g:livepreview_use_biber = 1
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.autoindent = true
+vim.opt.smartindent = true
+vim.opt.mouse = "a"
+vim.opt.foldlevelstart = 99
+vim.opt.foldcolumn = "2"
+vim.opt.colorcolumn = "80"
+vim.opt.laststatus = 3
+vim.opt.spell = true
+vim.opt.scrolloff = 5
+vim.opt.path:append("**")
+vim.opt.signcolumn = "auto"
+
+vim.g.livepreview_use_biber = 1
+
+EOF
 
 call plug#begin('~/.config/nvim/plugged')
 
