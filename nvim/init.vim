@@ -152,8 +152,6 @@ let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 set encoding=UTF-8
 
 
-" --------------------Prettier---------------------
-command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " ------------------Lightline------------------
 let g:lightline = {
