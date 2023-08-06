@@ -151,8 +151,6 @@ let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 " ------------------VIM-DEVICONS-----------
 set encoding=UTF-8
 
-" ------------------FZF--------------------
-let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -f -l -g ""'
 
 " --------------------Prettier---------------------
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
