@@ -1,8 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
-name = Anthony Suárez
-email = neolight1010@gmail.com
+	name = Anthony Suárez
+	email = neolight1010@gmail.com
+
 [core]
 	excludesfile = /home/neolight1010/.config/git/global.gitignore
 	pager = delta
@@ -22,3 +22,6 @@ email = neolight1010@gmail.com
 
 [init]
 	defaultBranch = main
+
+[includeIf "gitdir:~/dev/devsu/"]
+	path = ~/dev/devsu/.gitconfig
