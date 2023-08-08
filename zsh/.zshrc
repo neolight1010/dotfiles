@@ -133,3 +133,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 
 #### Starship ####
 eval "$(starship init zsh)"
+
+###### Serverless ######
+export PATH="$HOME/.serverless/bin:$PATH"
