@@ -108,88 +108,88 @@ require('nvim-treesitter.configs').setup({
   },
 })
 
-EOF
-
-" -------------SmoothCursor-------------
-:lua << EOF
-
+-------------SmoothCursor-------------
 require('smoothcursor').setup({
   fancy = {
       enable = true,
   }
 })
 
-EOF
-
-" ------------Mini.nvim---------------
-: lua << EOF
-
+------------Mini.nvim---------------
 require('mini.files').setup()
 require('mini.animate').setup()
 
+-----------------Leap.nvim------------
+require('leap').add_default_mappings()
+
+---------------Color scheme and theme configs-------------
+vim.opt.termguicolors = true
+vim.cmd.colorscheme("everblush")
+
+-------------- DBUI -----------------
+vim.g.db_ui_use_nerd_fonts = 1
+
+----------------Svelte------------------
+vim.g.svelte_preprocessors = { "typescript" }
+
+-----------------ULTISNIPS---------------
+vim.g.UltiSnipsExpandTrigger = "<NUL>"
+
+-----------------PYTHON-------------------
+vim.g.python3_host_prog = "~/.pyenv/versions/py3nvim/bin/python"
+
+------------------VIM-DEVICONS-----------
+vim.opt.encoding = "UTF-8"
+
+------------------Lightline------------------
+vim.g.lightline = {
+  colorscheme = "everblush",
+  active = {
+    left = {
+      { "mode", "paste" },
+      { "readonly", "filename", "modified", "current_function" },
+      { "coc_ok", "coc_errors", "coc_warnings", "coc_status" }
+    }
+  },
+  component_function = {
+    fugitive = "FugitiveStatusline",
+    current_function = "CurrentFunction"
+  }
+}
+
 EOF
-
-" --------------Leap.nvim------------
-:lua require('leap').add_default_mappings()
-
-" ---------------Color scheme and theme configs-------------
-set termguicolors
-colorscheme everblush
-
-" -------------- DBUI -----------------
-let g:db_ui_use_nerd_fonts = 1
-
-" ----------------Svelte------------------
-let g:svelte_preprocessors = ['typescript']
-
-" -----------------ULTISNIPS---------------
-let g:UltiSnipsExpandTrigger="<NUL>"
-
-" -----------------PYTHON-------------------
-let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
-
-" ------------------VIM-DEVICONS-----------
-set encoding=UTF-8
-
-
-
-" ------------------Lightline------------------
-let g:lightline = {
-      \ 'colorscheme': 'everblush',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'readonly', 'filename', 'modified', 'current_function'],
-      \             [ 'coc_ok', 'coc_errors', 'coc_warnings', 'coc_status']]
-      \ },
-      \ 'component_function': {
-      \   'fugitive': 'FugitiveStatusline',
-      \   'current_function': 'CurrentFunction'
-      \ },
-      \ }
 
 function! CurrentFunction()
   return get(b:, 'coc_current_function', '')
 endfunction
 
-call lightline#coc#register()
+:lua << EOF
 
-" ---------------------COC Autocompletion----------------------
-" TextEdit might fail if hidden is not set.
-set hidden
+vim.fn["lightline#coc#register"]()
 
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
+---------------------COC Autocompletion----------------------
+-- TextEdit might fail if hidden is not set.
+vim.opt.hidden = true
 
-" Give more space for displaying messages.
-set cmdheight=2
 
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
+-- Some servers have issues with backup files, see #649.
+vim.opt.backup = false
+vim.opt.writebackup = false
 
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
+
+-- Give more space for displaying messages.
+vim.opt.cmdheight = 2
+
+
+-- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+-- delays and poor user experience.
+vim.opt.updatetime = 300
+
+
+-- Don't pass messages to |ins-completion-menu|.
+vim.opt.shortmess:append("c")
+
+EOF
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
