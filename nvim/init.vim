@@ -13,6 +13,7 @@ vim.opt.foldcolumn = "2"
 vim.opt.colorcolumn = "80"
 vim.opt.laststatus = 3
 vim.opt.spell = true
+vim.opt.mousescroll = "ver:1,hor:5"
 vim.opt.scrolloff = 5
 vim.opt.path:append("**")
 vim.opt.signcolumn = "auto"
