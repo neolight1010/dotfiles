@@ -297,6 +297,22 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 let g:conjure#mapping#doc_word = "<localleader>k"
 let g:conjure#filetypes = ["clojure"]
 
+
+" -------- Telescope --------
+:lua << EOF
+
+require("telescope").setup({
+  defaults = {
+    layout_strategy = "vertical",
+    layout_config = {
+        preview_cutoff = 0,
+        height = 0.9,
+    }
+  }
+})
+
+EOF
+
 " ----------------My bindings-----------------
 let mapleader=","
 let maplocalleader="\\"
