@@ -114,7 +114,7 @@ require("lazy").setup({
   "Bekaboo/deadcolumn.nvim",
   {
     "echasnovski/mini.nvim",
-    version = "*",
+    version = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function ()
       require('mini.files').setup()
@@ -124,6 +124,7 @@ require("lazy").setup({
           start_jumping = "s"
         },
       })
+      require('mini.tabline').setup()
     end,
   },
   {
