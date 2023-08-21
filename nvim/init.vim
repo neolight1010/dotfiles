@@ -20,94 +20,92 @@ vim.opt.signcolumn = "auto"
 
 vim.g.livepreview_use_biber = 1
 
-EOF
+--------------Plugins----------------
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-call plug#begin('~/.config/nvim/plugged')
-
-Plug 'itchyny/lightline.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'josa42/vim-lightline-coc'
-
-Plug 'kyazdani42/nvim-web-devicons'
-
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-
-Plug 'editorconfig/editorconfig-vim'
-
-Plug 'tmsvg/pear-tree'
-Plug 'tpope/vim-sleuth'
-Plug 'puremourning/vimspector'
-Plug 'SirVer/ultisnips'
-Plug 'jparise/vim-graphql'
-Plug 'neoclide/jsonc.vim'
-Plug 'airblade/vim-gitgutter'
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'Vimjas/vim-python-pep8-indent'
-Plug 'mracos/mermaid.vim'
-Plug 'hashivim/vim-terraform'
-
-Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
-Plug 'lervag/vimtex'
-
-Plug 'mlaursen/vim-react-snippets'
-
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
-
-Plug 'leafgarland/typescript-vim'
-Plug 'yuezk/vim-js'
-
-Plug 'HerringtonDarkholme/yats.vim'
-Plug 'maxmellon/vim-jsx-pretty'
-Plug 'ap/vim-css-color'
-
-Plug 'jxnblk/vim-mdx-js'
-
-Plug 'adelarsq/vim-matchit'
-Plug 'jceb/vim-orgmode'
-
-Plug 'Yggdroot/indentLine'
-
-Plug 'purescript-contrib/purescript-vim'
-
-Plug 'nvim-lua/plenary.nvim' " Dependency of typebreak and telescope
-Plug 'nagy135/typebreak.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
-
-Plug 'tpope/vim-repeat'
-Plug 'ggandor/leap.nvim'
-
-Plug 'tpope/vim-dadbod'
-Plug 'kristijanhusak/vim-dadbod-ui'
-
-Plug 'gen740/SmoothCursor.nvim'
-Plug 'Olical/conjure'
-Plug 'fedepujol/move.nvim'
-Plug 'github/copilot.vim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'Bekaboo/deadcolumn.nvim'
-Plug 'echasnovski/mini.nvim'
-
-" Color schemes
-Plug 'rafi/awesome-vim-colorschemes'
-Plug 'Everblush/nvim'
-Plug 'xolox/vim-colorscheme-switcher'
-Plug 'xolox/vim-misc'
-
-let g:colorscheme_switcher_define_mappings = 0
-
-" Leave vim-devicons at the bottom of plugins!!!
-Plug 'ryanoasis/vim-devicons'
-call plug#end()
-
-" -------------Treesitter-------------
-: lua << EOF
-
-require('nvim-treesitter.configs').setup({
-  highlight = {
-    enable = true,
+require("lazy").setup({
+  "itchyny/lightline.vim",
+  {
+      "neoclide/coc.nvim",
+      branch = "release",
   },
+  "josa42/vim-lightline-coc",
+  "tpope/vim-fugitive",
+  "tpope/vim-surround",
+  "editorconfig/editorconfig-vim",
+  "tmsvg/pear-tree",  -- TODO replace with nvim-autopairs
+  "tpope/vim-sleuth",
+  "puremourning/vimspector",
+  "jparise/vim-graphql",
+  "neoclide/jsonc.vim",
+  "airblade/vim-gitgutter",
+  "dart-lang/dart-vim-plugin",
+  "Vimjas/vim-python-pep8-indent",
+  "mracos/mermaid.vim",
+  "hashivim/vim-terraform",
+  "lervag/vimtex",
+  "mlaursen/vim-react-snippets", 
+  {
+    "evanleck/vim-svelte",
+    branch = "main",
+  },
+  "leafgarland/typescript-vim",
+  "yuezk/vim-js",
+  "HerringtonDarkholme/yats.vim",
+  "maxmellon/vim-jsx-pretty",
+  "ap/vim-css-color",
+  "jxnblk/vim-mdx-js",
+  "adelarsq/vim-matchit",
+  "jceb/vim-orgmode",
+  "Yggdroot/indentLine",
+  "purescript-contrib/purescript-vim",
+  { "nagy135/typebreak.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
+  {
+    "nvim-telescope/telescope.nvim",
+    branch = "0.1.x",
+    dependencies = { "nvim-lua/plenary.nvim" },
+  },
+  "tpope/vim-repeat",
+  "ggandor/leap.nvim",
+  "tpope/vim-dadbod",
+  "kristijanhusak/vim-dadbod-ui",
+  "gen740/SmoothCursor.nvim",
+  "Olical/conjure",
+  "fedepujol/move.nvim",
+  "github/copilot.vim",
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function ()
+      local configs = require("nvim-treesitter.configs")
+
+      configs.setup({
+        highlight = { enable = true },
+      })
+    end
+  },
+  "Bekaboo/deadcolumn.nvim",
+  { "echasnovski/mini.nvim", dependencies = { "kyazdani42/nvim-web-devicons" } },
+
+  -- Color schemes
+  "rafi/awesome-vim-colorschemes",
+  "Everblush/nvim",
+  { "xolox/vim-colorscheme-switcher", dependencies = { "xolox/vim-misc" } },
+  "ryanoasis/vim-devicons",
 })
+
+vim.g.colorscheme_switcher_define_mappings = 0
 
 -------------SmoothCursor-------------
 require('smoothcursor').setup({
@@ -132,9 +130,6 @@ vim.g.db_ui_use_nerd_fonts = 1
 
 ----------------Svelte------------------
 vim.g.svelte_preprocessors = { "typescript" }
-
------------------ULTISNIPS---------------
-vim.g.UltiSnipsExpandTrigger = "<NUL>"
 
 -----------------PYTHON-------------------
 vim.g.python3_host_prog = "~/.pyenv/versions/py3nvim/bin/python"
