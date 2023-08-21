@@ -97,7 +97,13 @@ require("lazy").setup({
   "tpope/vim-dadbod",
   "kristijanhusak/vim-dadbod-ui",
   "gen740/SmoothCursor.nvim",
-  "Olical/conjure",
+  {
+    "Olical/conjure",
+    ft = { "clojure" },
+    init = function ()
+      vim.g["conjure#mapping#doc_word"] = "<localleader>k"
+    end,
+  },
   "fedepujol/move.nvim",
   "github/copilot.vim",
   {
@@ -298,11 +304,6 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" ---------- Conjure -----------
-let g:conjure#mapping#doc_word = "<localleader>k"
-let g:conjure#filetypes = ["clojure"]
-
 
 " -------- Telescope --------
 :lua << EOF
