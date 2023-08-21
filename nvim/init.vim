@@ -44,7 +44,11 @@ require("lazy").setup({
   "tpope/vim-fugitive",
   "tpope/vim-surround",
   "editorconfig/editorconfig-vim",
-  "tmsvg/pear-tree",  -- TODO replace with nvim-autopairs
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    opts = {},
+  },
   "tpope/vim-sleuth",
   "puremourning/vimspector",
   "jparise/vim-graphql",
