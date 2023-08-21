@@ -35,12 +35,10 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  "itchyny/lightline.vim",
   {
       "neoclide/coc.nvim",
       branch = "release",
   },
-  "josa42/vim-lightline-coc",
   "tpope/vim-fugitive",
   "tpope/vim-surround",
   "editorconfig/editorconfig-vim",
@@ -141,22 +139,6 @@ vim.g.python3_host_prog = "~/.pyenv/versions/py3nvim/bin/python"
 ------------------VIM-DEVICONS-----------
 vim.opt.encoding = "UTF-8"
 
-------------------Lightline------------------
-vim.g.lightline = {
-  colorscheme = "everblush",
-  active = {
-    left = {
-      { "mode", "paste" },
-      { "readonly", "filename", "modified", "current_function" },
-      { "coc_ok", "coc_errors", "coc_warnings", "coc_status" }
-    }
-  },
-  component_function = {
-    fugitive = "FugitiveStatusline",
-    current_function = "CurrentFunction"
-  }
-}
-
 EOF
 
 function! CurrentFunction()
@@ -164,8 +146,6 @@ function! CurrentFunction()
 endfunction
 
 :lua << EOF
-
-vim.fn["lightline#coc#register"]()
 
 ---------------------COC Autocompletion----------------------
 -- TextEdit might fail if hidden is not set.
