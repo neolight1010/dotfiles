@@ -113,13 +113,19 @@ require("lazy").setup({
     end
   },
   "Bekaboo/deadcolumn.nvim",
-  { "echasnovski/mini.nvim", dependencies = { "kyazdani42/nvim-web-devicons" } },
+  { "echasnovski/mini.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function ()
+      require("lualine").setup()
+    end,
+  },
 
   -- Color schemes
   "rafi/awesome-vim-colorschemes",
   "Everblush/nvim",
   { "xolox/vim-colorscheme-switcher", dependencies = { "xolox/vim-misc" } },
-  "ryanoasis/vim-devicons",
 })
 
 vim.g.colorscheme_switcher_define_mappings = 0
