@@ -94,7 +94,6 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" },
   },
   "tpope/vim-repeat",
-  "ggandor/leap.nvim",
   "tpope/vim-dadbod",
   "kristijanhusak/vim-dadbod-ui",
   "gen740/SmoothCursor.nvim",
@@ -113,7 +112,20 @@ require("lazy").setup({
     end
   },
   "Bekaboo/deadcolumn.nvim",
-  { "echasnovski/mini.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+  {
+    "echasnovski/mini.nvim",
+    version = "*",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function ()
+      require('mini.files').setup()
+      require('mini.animate').setup()
+      require("mini.jump2d").setup({
+        mappings = {
+          start_jumping = "s"
+        },
+      })
+    end,
+  },
   {
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -136,13 +148,6 @@ require('smoothcursor').setup({
       enable = true,
   }
 })
-
-------------Mini.nvim---------------
-require('mini.files').setup()
-require('mini.animate').setup()
-
------------------Leap.nvim------------
-require('leap').add_default_mappings()
 
 ---------------Color scheme and theme configs-------------
 vim.opt.termguicolors = true
