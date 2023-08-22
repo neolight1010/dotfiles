@@ -20,7 +20,7 @@ vim.opt.signcolumn = "auto"
 
 vim.g.livepreview_use_biber = 1
 
-if vim.fn.has("wsl") then
+if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
     name = "WslClipboard",
     copy = {
