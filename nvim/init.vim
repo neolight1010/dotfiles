@@ -131,6 +131,7 @@ require("lazy").setup({
         },
       })
       require('mini.tabline').setup()
+      require('mini.comment').setup()
     end,
   },
   {
