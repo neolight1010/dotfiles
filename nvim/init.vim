@@ -92,6 +92,17 @@ require("lazy").setup({
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
     dependencies = { "nvim-lua/plenary.nvim" },
+    config = function ()
+      require("telescope").setup({
+        defaults = {
+          layout_strategy = "vertical",
+          layout_config = {
+            preview_cutoff = 0,
+            height = 0.9,
+          }
+        }
+      })
+    end
   },
   "tpope/vim-repeat",
   "tpope/vim-dadbod",
@@ -307,21 +318,6 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" -------- Telescope --------
-:lua << EOF
-
-require("telescope").setup({
-  defaults = {
-    layout_strategy = "vertical",
-    layout_config = {
-        preview_cutoff = 0,
-        height = 0.9,
-    }
-  }
-})
-
-EOF
 
 " ----------------My bindings-----------------
 let mapleader=","
