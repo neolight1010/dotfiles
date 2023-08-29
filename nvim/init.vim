@@ -100,6 +100,18 @@ require("lazy").setup({
             preview_cutoff = 0,
             height = 0.9,
           }
+        },
+        pickers = {
+          buffers = {
+            mappings = {
+              i = {
+                ["<c-d>"] = "delete_buffer",
+              },
+              n = {
+                ["<c-d>"] = "delete_buffer",
+              }
+            }
+          }
         }
       })
     end
