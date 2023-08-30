@@ -200,8 +200,6 @@ require("lazy").setup({
       require('mini.cursorword').setup()
       require('mini.indentscope').setup()
       require('mini.splitjoin').setup()
-
-      vim.cmd.colorscheme("randomhue")
     end,
   },
   {
@@ -268,6 +266,7 @@ require('smoothcursor').setup({
 })
 
 ---------------Color scheme and theme configs-------------
+vim.cmd.colorscheme("ayu")
 vim.opt.termguicolors = true
 
 -------------- DBUI -----------------
