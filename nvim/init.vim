@@ -33,6 +33,9 @@ if vim.fn.has("wsl") == 1 then
   }
 end
 
+vim.g.mapleader = ","
+vim.g.maplocalleader = "\\"
+
 --------------Plugins----------------
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -235,6 +238,19 @@ require("lazy").setup({
       })
     end,
   },
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {},
+    config = function ()
+      vim.keymap.set("n", "<leader>xx", function() require("trouble").open() end)
+      vim.keymap.set("n", "<leader>xw", function() require("trouble").open("workspace_diagnostics") end)
+      vim.keymap.set("n", "<leader>xd", function() require("trouble").open("document_diagnostics") end)
+      vim.keymap.set("n", "<leader>xq", function() require("trouble").open("quickfix") end)
+      vim.keymap.set("n", "<leader>xl", function() require("trouble").open("loclist") end)
+      vim.keymap.set("n", "gr", function() require("trouble").open("lsp_references") end)
+    end
+  },
 
   -- Color schemes
   "rafi/awesome-vim-colorschemes",
@@ -269,8 +285,6 @@ vim.opt.encoding = "UTF-8"
 EOF
 
 " ----------------My bindings-----------------
-let mapleader=","
-let maplocalleader="\\"
 
 nnoremap <Leader>tn :tabnew %<CR>
 nnoremap <Leader>n <Cmd>nohlsearch\|diffupdate\|redraw<CR>
@@ -349,7 +363,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
     vim.keymap.set('n', '<Leader>f', vim.lsp.buf.format, { buffer = args.buf })
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = args.buf })
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { buffer = args.buf })
 
     vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
