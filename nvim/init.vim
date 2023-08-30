@@ -354,6 +354,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
     vim.keymap.set('v', '<Leader>c', vim.lsp.buf.code_action, { buffer = args.buf })
+
+    vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { buffer = args.buf })
+    vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { buffer = args.buf })
   end,
 })
 
