@@ -266,7 +266,7 @@ require('smoothcursor').setup({
 })
 
 ---------------Color scheme and theme configs-------------
-vim.cmd.colorscheme("ayu")
+vim.cmd.colorscheme("challenger_deep")
 vim.opt.termguicolors = true
 
 -------------- DBUI -----------------
