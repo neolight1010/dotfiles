@@ -18,8 +18,6 @@ vim.opt.scrolloff = 5
 vim.opt.path:append("**")
 vim.opt.signcolumn = "auto"
 
-vim.g.livepreview_use_biber = 1
-
 if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
     name = "WslClipboard",
@@ -72,6 +70,50 @@ require("lazy").setup({
   {
     "evanleck/vim-svelte",
     branch = "main",
+  },
+  {
+    "williamboman/mason.nvim",
+    config = function ()
+      require("mason").setup()
+    end,
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    dependencies = { "neovim/nvim-lspconfig", "williamboman/mason.nvim" },
+    config = function ()
+      require("mason-lspconfig").setup()
+
+      require("mason-lspconfig").setup_handlers({
+          function (server_name)
+              require("lspconfig")[server_name].setup({})
+          end,
+      })
+    end,
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    config = function ()
+      local cmp = require("cmp")
+
+      cmp.setup({
+        snippet = {},
+        window = {},
+        mapping = cmp.mapping.preset.insert({
+          ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
+          ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
+          ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+          ["<C-f>"] = cmp.mapping.scroll_docs(4),
+          ["<C-Space>"] = cmp.mapping.complete(),
+          ["<C-e>"] = cmp.mapping.abort(),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+        }),
+        sources = cmp.config.sources({
+          { name = "nvim_lsp" },
+          -- TODO Add buffer source
+        })
+      })
+    end,
+    dependencies = { "hrsh7th/cmp-nvim-lsp" },
   },
   "leafgarland/typescript-vim",
   "yuezk/vim-js",
@@ -180,7 +222,7 @@ require("lazy").setup({
           override = {
             ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
             ["vim.lsp.util.stylize_markdown"] = true,
-            ["cmp.entry.get_documentation"] = true,
+            ["cmp.entry.get_documentation"] = false,
           }
         },
         presets = {
@@ -300,3 +342,19 @@ nnoremap <F6> :lua MiniFiles.open()<CR>
 nnoremap <C-n> :lua MiniFiles.open()<CR>
 
 nnoremap <Space>d S<Esc>
+
+:lua << EOF
+
+vim.api.nvim_create_autocmd('LspAttach', {
+  callback = function(args)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
+    vim.keymap.set('n', '<Leader>f', vim.lsp.buf.format, { buffer = args.buf })
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = args.buf })
+    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { buffer = args.buf })
+
+    vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
+    vim.keymap.set('v', '<Leader>c', vim.lsp.buf.code_action, { buffer = args.buf })
+  end,
+})
+
+EOF
