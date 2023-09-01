@@ -365,6 +365,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', '<Leader>f', vim.lsp.buf.format, { buffer = args.buf })
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = args.buf })
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { buffer = args.buf })
+    vim.keymap.set('n', '<Space>r', vim.lsp.buf.rename, { buffer = args.buf })
 
     vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
     vim.keymap.set('v', '<Leader>c', vim.lsp.buf.code_action, { buffer = args.buf })
