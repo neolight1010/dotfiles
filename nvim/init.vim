@@ -252,7 +252,7 @@ require("lazy").setup({
 
   -- Color schemes
   "rafi/awesome-vim-colorschemes",
-  "Everblush/nvim",
+  { 'Everblush/nvim', name = 'everblush' },
   { "xolox/vim-colorscheme-switcher", dependencies = { "xolox/vim-misc" } },
 })
 
@@ -266,7 +266,8 @@ require('smoothcursor').setup({
 })
 
 ---------------Color scheme and theme configs-------------
-vim.cmd.colorscheme("challenger_deep")
+vim.opt.background = "dark"
+vim.cmd.colorscheme("everblush")
 vim.opt.termguicolors = true
 
 -------------- DBUI -----------------
