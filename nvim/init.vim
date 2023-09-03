@@ -118,7 +118,13 @@ require("lazy").setup({
     end,
     dependencies = { "hrsh7th/cmp-nvim-lsp" },
   },
+
   "leafgarland/typescript-vim",
+  {
+    "vim-crystal/vim-crystal",
+    ft = { "crystal" },
+  },
+  
   "yuezk/vim-js",
   "HerringtonDarkholme/yats.vim",
   "maxmellon/vim-jsx-pretty",
