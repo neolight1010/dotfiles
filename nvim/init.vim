@@ -112,11 +112,11 @@ require("lazy").setup({
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
-          -- TODO Add buffer source
+          { name = "buffer" },
         })
       })
     end,
-    dependencies = { "hrsh7th/cmp-nvim-lsp" },
+    dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer" },
   },
 
   "leafgarland/typescript-vim",
