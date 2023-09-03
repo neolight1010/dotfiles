@@ -115,6 +115,13 @@ require("lazy").setup({
           { name = "buffer" },
         })
       })
+
+      cmp.setup.cmdline({ "/", "?" }, {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = {
+          { name = "buffer" },
+        }
+      })
     end,
     dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer" },
   },
