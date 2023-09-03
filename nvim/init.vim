@@ -252,7 +252,12 @@ require("lazy").setup({
 
   -- Color schemes
   "rafi/awesome-vim-colorschemes",
-  { 'Everblush/nvim', name = 'everblush' },
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
   { "xolox/vim-colorscheme-switcher", dependencies = { "xolox/vim-misc" } },
 })
 
@@ -267,7 +272,7 @@ require('smoothcursor').setup({
 
 ---------------Color scheme and theme configs-------------
 vim.opt.background = "dark"
-vim.cmd.colorscheme("everblush")
+vim.cmd.colorscheme("tokyonight")
 vim.opt.termguicolors = true
 
 -------------- DBUI -----------------
