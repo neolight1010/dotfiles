@@ -87,9 +87,27 @@ require("lazy").setup({
       require("mason-lspconfig").setup()
 
       require("mason-lspconfig").setup_handlers({
-          function (server_name)
-              require("lspconfig")[server_name].setup({})
-          end,
+        function (server_name)
+          require("lspconfig")[server_name].setup({})
+        end,
+
+        ["tsserver"] = function ()
+          local lspconfig = require("lspconfig")
+
+          lspconfig.tsserver.setup({
+            root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json"),
+            single_file_support = false,
+          })
+        end,
+
+        ["denols"] = function ()
+          local lspconfig = require("lspconfig")
+
+          lspconfig.denols.setup({
+            root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc"),
+            single_file_support = false,
+          })
+        end
       })
     end,
   },
