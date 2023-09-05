@@ -157,7 +157,6 @@ require("lazy").setup({
     },
   },
 
-  "leafgarland/typescript-vim",
   {
     "vim-crystal/vim-crystal",
     ft = { "crystal" },
