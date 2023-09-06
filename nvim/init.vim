@@ -133,6 +133,30 @@ require("lazy").setup({
     branch = "main",
   },
   {
+    "mhartington/formatter.nvim",
+    config = function ()
+      require("formatter").setup({
+        filetype = {
+          python = {
+            require("formatter.filetypes.python").black,
+          },
+          ["*"] = {
+            function ()
+              local defined_types = require("formatter.config").values.filetype
+              if defined_types[vim.bo.filetype] ~= nil then
+                return nil
+              end
+
+              vim.lsp.buf.format({ async = true })
+            end,
+          },
+        },
+      })
+
+      vim.keymap.set("n", "<Leader>f", "<Cmd>Format<CR>", { silent = true })
+    end,
+  },
+  {
     "williamboman/mason.nvim",
     config = function ()
       require("mason").setup()
@@ -140,7 +164,11 @@ require("lazy").setup({
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    dependencies = { "neovim/nvim-lspconfig", "williamboman/mason.nvim" },
+    dependencies = {
+      "neovim/nvim-lspconfig",
+      "williamboman/mason.nvim",
+      "mhartington/formatter.nvim",
+    },
     config = function ()
       require("mason-lspconfig").setup()
 
@@ -434,7 +462,6 @@ nnoremap <Space>d S<Esc>
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
-    vim.keymap.set('n', '<Leader>f', vim.lsp.buf.format, { buffer = args.buf })
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = args.buf })
     vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { buffer = args.buf })
     vim.keymap.set('n', '<Space>r', vim.lsp.buf.rename, { buffer = args.buf })
