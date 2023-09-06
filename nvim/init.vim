@@ -381,14 +381,6 @@ nnoremap <Space>g <cmd>Telescope live_grep<cr>
 nnoremap <Space>b <cmd>Telescope buffers<cr>
 nnoremap <Space>h <cmd>Telescope help_tags<cr>
 
-" GitGutter mappings
-nnoremap [c :GitGutterPrevHunk<CR>
-nnoremap ]c :GitGutterNextHunk<CR>
-
-nnoremap <Leader>ga :GitGutterStageHunk<CR>
-nnoremap <Leader>gp :GitGutterPreviewHunk<CR>
-nnoremap <Leader>gu :GitGutterUndoHunk<CR>
-
 nnoremap <Leader>G :G 
 nnoremap <Leader>gs :G<CR>
 nnoremap <Leader>gb :G blame<CR>
