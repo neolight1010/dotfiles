@@ -218,7 +218,13 @@ require("lazy").setup({
           { name = "nvim_lsp" },
           { name = "buffer" },
           { name = "copilot" },
-        })
+        }),
+        formatting = {
+          format = require("lspkind").cmp_format({
+            mode = "symbol_text",
+            symbol_map = { Copilot = "" },
+          }),
+        }
       })
 
       cmp.setup.cmdline({ "/", "?" }, {
@@ -258,6 +264,7 @@ require("lazy").setup({
               })
             end,
           },
+          "onsails/lspkind.nvim",
         },
       },
     },
