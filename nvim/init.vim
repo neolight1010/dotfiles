@@ -217,6 +217,7 @@ require("lazy").setup({
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "buffer" },
+          { name = "copilot" },
         })
       })
 
@@ -240,6 +241,25 @@ require("lazy").setup({
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
+      {
+        "zbirenbaum/copilot-cmp",
+        config = function()
+          require("copilot_cmp").setup()
+        end,
+        dependencies = {
+          {
+            "zbirenbaum/copilot.lua",
+            cmd = "Copilot",
+            event = "InsertEnter",
+            config = function ()
+              require("copilot").setup({
+                suggestion = { enabled = false },
+                panel = { enabled = false },
+              })
+            end,
+          },
+        },
+      },
     },
   },
 
@@ -298,7 +318,6 @@ require("lazy").setup({
     end,
   },
   "fedepujol/move.nvim",
-  "github/copilot.vim",
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -445,10 +464,6 @@ vnoremap <silent> <C-j> :MoveBlock(1)<CR>
 vnoremap <silent> <C-k> :MoveBlock(-1)<CR>
 vnoremap <silent> <C-l> :MoveHBlock(1)<CR>
 vnoremap <silent> <C-h> :MoveHBlock(-1)<CR>
-
-" Copilot
-imap <silent><script><expr> <C-l> copilot#Accept("")
-let g:copilot_no_tab_map = v:true
 
 " File exploration
 nnoremap <F6> :lua MiniFiles.open()<CR>
