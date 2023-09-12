@@ -140,6 +140,9 @@ require("lazy").setup({
           python = {
             require("formatter.filetypes.python").black,
           },
+          typescript = {
+            require("formatter.filetypes.typescript").prettier,
+          },
           ["*"] = {
             function ()
               local defined_types = require("formatter.config").values.filetype
