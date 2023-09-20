@@ -235,6 +235,7 @@ require("lazy").setup({
           { name = "nvim_lsp" },
           { name = "buffer" },
           { name = "copilot" },
+          { name = "nvim_lsp_signature_help" },
         }),
         formatting = {
           format = require("lspkind").cmp_format({
@@ -264,6 +265,7 @@ require("lazy").setup({
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-nvim-lsp-signature-help",
       {
         "zbirenbaum/copilot-cmp",
         config = function()
