@@ -167,7 +167,19 @@ require("lazy").setup({
 
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
         callback = function ()
-          require("lint").try_lint()
+          local current_filetype = vim.bo.filetype
+          local try_lint = require("lint").try_lint
+
+          if current_filetype == "python" then
+            if vim.fn.findfile(".pylintrc", ".;") ~= "" then
+              try_lint()
+              return
+            end
+
+            return
+          end
+
+          try_lint()
         end,
       })
     end,
