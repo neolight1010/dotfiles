@@ -53,7 +53,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   "tpope/vim-fugitive",
   "tpope/vim-surround",
-  "editorconfig/editorconfig-vim",
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
