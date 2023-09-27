@@ -4,7 +4,7 @@ bindkey -v
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-if [ $(grep -c "ID=nixos" /etc/os-release) -eq 1 ]
+if [ $(grep -c "ID=nixos" /etc/os-release) -eq 0 ]
 then
     export ZSH="$HOME/.oh-my-zsh"
 fi
