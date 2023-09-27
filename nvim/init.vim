@@ -116,6 +116,8 @@ require("lazy").setup({
 
         map('n', '<leader>tb', gs.toggle_current_line_blame)
         map('n', '<leader>td', gs.toggle_deleted)
+        map('n', '<leader>tw', gs.toggle_word_diff)
+        map('n', '<leader>th', gs.toggle_linehl)
 
         map({"o", "x"}, "ih", ":<C-U>Gitsigns select_hunk<CR>")
       end,
