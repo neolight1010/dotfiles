@@ -96,7 +96,9 @@ export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 
 ######## direnv #########
-eval "$(direnv hook zsh)"
+if [ -x "$(command -v direnv)" ]; then
+    eval "$(direnv hook zsh)"
+fi
 
 ############## Poetry ###############
 export PATH="$HOME/.poetry/bin:$PATH"
