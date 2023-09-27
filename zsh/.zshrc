@@ -113,7 +113,10 @@ export PATH="$HOME/.poetry/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 
-export PATH="$(yarn global bin):$PATH"
+if [ -x "$(command -v yarn)" ]; then
+    export PATH="$(yarn global bin):$PATH"
+fi
+
 export PATH="$HOME/src/jdk-11.0.12+7/bin/:$PATH"
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
