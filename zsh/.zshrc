@@ -54,6 +54,7 @@ plugins=(
     z
 )
 
+# TODO Switch to Antigen
 source ~/.zplug/init.zsh
 zplug "lukechilds/zsh-nvm"
 zplug "mattberther/zsh-pyenv"
