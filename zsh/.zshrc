@@ -87,8 +87,18 @@ export EDITOR='nvim'
 ############# Aliases ##########33
 alias tmx="tmuxinator"
 alias j="z"
+
 alias ls="exa"
 alias k="ls"
+
+if [ -x "$(command -v batcat)" ]; then
+    alias bat="batcat"
+fi
+
+# TODO Create function for command -v
+if [[ -x "$(command -v bat)" ]] || [[ -x "$(command -v batcat)" ]]; then
+    alias cat="bat"
+fi
 
 alias copyq="flatpak run com.github.hluk.copyq"
 
