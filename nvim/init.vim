@@ -407,6 +407,7 @@ require("lazy").setup({
       vim.keymap.set("n", "<leader>xq", function() require("trouble").open("quickfix") end)
       vim.keymap.set("n", "<leader>xl", function() require("trouble").open("loclist") end)
       vim.keymap.set("n", "gr", function() require("trouble").open("lsp_references") end)
+      vim.keymap.set("n", "gi", function() require("trouble").open("lsp_implementations") end)
     end
   },
 
@@ -517,7 +518,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = args.buf })
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { buffer = args.buf })
     vim.keymap.set('n', '<Space>r', vim.lsp.buf.rename, { buffer = args.buf })
 
     vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
