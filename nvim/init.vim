@@ -144,6 +144,9 @@ require("lazy").setup({
           typescript = {
             require("formatter.filetypes.typescript").prettier,
           },
+          typescriptreact = {
+            require("formatter.filetypes.typescriptreact").prettier,
+          },
           ["*"] = {
             function ()
               local defined_types = require("formatter.config").values.filetype
