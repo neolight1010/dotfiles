@@ -59,7 +59,6 @@ require("lazy").setup({
     opts = {},
   },
   "tpope/vim-sleuth",
-  "puremourning/vimspector",
   "jparise/vim-graphql",
   "neoclide/jsonc.vim",
   {
