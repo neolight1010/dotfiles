@@ -421,6 +421,7 @@ require("lazy").setup({
     priority = 1000,
     opts = {},
   },
+  "katawful/kat.nvim",
   { "xolox/vim-colorscheme-switcher", dependencies = { "xolox/vim-misc" } },
 })
 
@@ -435,7 +436,7 @@ require('smoothcursor').setup({
 
 ---------------Color scheme and theme configs-------------
 vim.opt.background = "dark"
-vim.cmd.colorscheme("tokyonight")
+vim.cmd.colorscheme("kat.nvim")
 vim.opt.termguicolors = true
 
 -------------- DBUI -----------------
