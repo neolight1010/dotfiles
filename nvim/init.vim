@@ -412,7 +412,7 @@ require("lazy").setup({
       vim.keymap.set("n", "gi", function() require("trouble").open("lsp_implementations") end)
     end
   },
-
+  "famiu/bufdelete.nvim",
   -- Color schemes
   "rafi/awesome-vim-colorschemes",
   {
