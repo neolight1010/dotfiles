@@ -413,6 +413,10 @@ require("lazy").setup({
     end
   },
   "famiu/bufdelete.nvim",
+  {
+    "gsuuon/tshjkl.nvim",
+    config = true,
+  },
   -- Color schemes
   "rafi/awesome-vim-colorschemes",
   {
