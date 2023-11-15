@@ -158,3 +158,6 @@ export PATH="$HOME/.serverless/bin:$PATH"
 
 ###### Go ######
 export PATH=$PATH:/usr/local/go/bin
+
+###### Scala ######
+export PATH=$PATH:$HOME/.local/share/coursier/bin
