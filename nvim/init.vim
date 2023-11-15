@@ -17,6 +17,7 @@ vim.opt.mousescroll = "ver:1,hor:5"
 vim.opt.scrolloff = 5
 vim.opt.path:append("**")
 vim.opt.signcolumn = "auto"
+vim.opt_global.shortmess:remove("F")
 
 if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
@@ -305,6 +306,14 @@ require("lazy").setup({
   },
 
   {
+    "scalameta/nvim-metals",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    ft = { "scala" },
+    config = function ()
+      require("metals").initialize_or_attach({})
+    end,
+  },
+  {
     "vim-crystal/vim-crystal",
     ft = { "crystal" },
   },
@@ -322,7 +331,7 @@ require("lazy").setup({
   {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dpendencies = { "nvim-lua/plenary.nvim" },
     config = function ()
       require("telescope").setup({
         defaults = {
@@ -337,7 +346,7 @@ require("lazy").setup({
             mappings = {
               i = {
                 ["<c-d>"] = "delete_buffer",
-              },
+             },
               n = {
                 ["<c-d>"] = "delete_buffer",
               }
