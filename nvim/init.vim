@@ -419,6 +419,8 @@ require("lazy").setup({
       vim.keymap.set("n", "<leader>xl", function() require("trouble").open("loclist") end)
       vim.keymap.set("n", "gr", function() require("trouble").open("lsp_references") end)
       vim.keymap.set("n", "gi", function() require("trouble").open("lsp_implementations") end)
+      vim.keymap.set("n", "gd", function() require("trouble").open("lsp_definitions") end)
+      vim.keymap.set("n", "gt", function() require("trouble").open("lsp_type_definitions") end)
     end
   },
   "famiu/bufdelete.nvim",
@@ -533,7 +535,6 @@ nnoremap <Space>d S<Esc>
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { buffer = args.buf })
     vim.keymap.set('n', '<Space>r', vim.lsp.buf.rename, { buffer = args.buf })
 
     vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
