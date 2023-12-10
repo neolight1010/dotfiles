@@ -760,6 +760,11 @@ $env.config = {
 
 # Aliases
 alias g = git
+alias ga = git add
+alias gc = git commit
+alias gcmsg = git commit -m
+alias gp = git push
+alias gl = git pull
 alias gst = git status
 
 source "/home/neolight1010/.config/nushell/rtx.nu"
