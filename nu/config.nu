@@ -768,3 +768,4 @@ alias gl = git pull
 alias gst = git status
 
 source "/home/neolight1010/.config/nushell/rtx.nu"
+use ./starship.nu
