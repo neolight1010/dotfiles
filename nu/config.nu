@@ -769,5 +769,8 @@ alias gp = git push
 alias gl = git pull
 alias gst = git status
 
+alias j = z
+
 source "/home/neolight1010/.config/nushell/rtx.nu"
+source "/home/neolight1010/.config/nushell/zoxide.nu"
 use ($nu.config-path | path dirname | path join starship.nu)
