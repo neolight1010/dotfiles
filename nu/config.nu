@@ -767,6 +767,7 @@ alias gd = git diff
 alias gds = git diff --staged
 alias gp = git push
 alias gl = git pull
+alias glg = git log
 alias gst = git status
 
 alias j = z
