@@ -770,6 +770,8 @@ alias gds = git diff --staged
 alias gp = git push
 alias gl = git pull
 alias glg = git log
+alias grs = git restore
+alias grst = git restore --staged
 alias gst = git status
 
 alias j = z
