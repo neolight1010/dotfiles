@@ -46,6 +46,10 @@ def create_right_prompt [] {
     ([$last_exit_code, (char space), $time_segment] | str join)
 }
 
+def is_wsl [] {
+    open /proc/sys/kernel/osrelease | str contains "microsoft"
+}
+
 # Use nushell functions to define your right and left prompt
 $env.PROMPT_COMMAND = {|| create_left_prompt }
 # FIXME: This default is not implemented in rust code as of 2023-09-08.
@@ -101,3 +105,7 @@ $env.EDITOR = "nvim"
 
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.cargo/bin")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/bin")
+
+if (is_wsl) {
+    $env.MESA_D3D12_DEFAULT_ADAPTER_NAME = NVIDIA
+}
