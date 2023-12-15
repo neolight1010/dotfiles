@@ -531,6 +531,11 @@ nnoremap <Space>d S<Esc>
 
 :lua << EOF
 
+-- Custom mappings
+
+vim.keymap.set("n", "[t", "<Cmd>tabprevious<CR>");
+vim.keymap.set("n", "]t", "<Cmd>tabnext<CR>");
+
 -- LSP configs
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
