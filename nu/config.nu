@@ -779,6 +779,14 @@ alias gst = git status
 
 alias j = z
 
+{ ||
+    if (which direnv | is-empty) {
+        return
+    }
+
+    direnv export json | from json | default {} | load-env
+}
+
 source "/home/neolight1010/.config/nushell/rtx.nu"
 source "/home/neolight1010/.config/nushell/zoxide.nu"
 use ($nu.config-path | path dirname | path join starship.nu)
