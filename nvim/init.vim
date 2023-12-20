@@ -428,6 +428,15 @@ require("lazy").setup({
     "gsuuon/tshjkl.nvim",
     config = true,
   },
+  {
+    "hedyhli/outline.nvim",
+    config = function ()
+      vim.keymap.set("n", "<Leader>o", "<Cmd>Outline<CR>", { desc = "Toggle Outline" })
+
+      require("outline").setup({})
+    end,
+  },
+
   -- Color schemes
   "rafi/awesome-vim-colorschemes",
   {
