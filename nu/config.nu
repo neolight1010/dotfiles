@@ -775,7 +775,11 @@ alias glg = git log
 alias grb = git rebase
 alias grs = git restore
 alias grst = git restore --staged
+alias gsh = git show
 alias gst = git status
+alias gsta = git stash push
+alias gstd = git stash drop
+alias gstp = git stash pop
 
 alias j = z
 
