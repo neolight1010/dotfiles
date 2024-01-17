@@ -6,8 +6,9 @@ if wezterm.config_builder then
     config = wezterm.config_builder()
 end
 
-config.font = wezterm.font 'Jetbrains Mono'
-config.color_scheme = 'UnderTheSea'
+config.color_scheme = 'Sakura'
 config.window_decorations = 'RESIZE'
+
+config.window_close_confirmation = 'NeverPrompt'
 
 return config
