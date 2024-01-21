@@ -21,19 +21,19 @@ def "parse vars" [] {
   $in | lines | parse "{op},{name},{value}"
 }
   
-def --wrapped rtx [command?: string, --help, ...rest: string] {
+def --wrapped mise [command?: string, --help, ...rest: string] {
   let commands = ["shell", "deactivate"]
   
   if ($command == null) {
-    ^"/home/neolight1010/.cargo/bin/rtx"
+    ^"/home/neolight1010/.cargo/bin/mise"
   } else if ($command == "activate") {
     $env.RTX_SHELL = "nu"
   } else if ($command in $commands) {
-    ^"/home/neolight1010/.cargo/bin/rtx" $command $rest
+    ^"/home/neolight1010/.cargo/bin/mise" $command $rest
     | parse vars
     | update-env
   } else {
-    ^"/home/neolight1010/.cargo/bin/rtx" $command $rest
+    ^"/home/neolight1010/.cargo/bin/mise" $command $rest
   }
 }
   
@@ -48,7 +48,7 @@ def --env "update-env" [] {
 }
   
 def --env rtx_hook [] {
-  ^"/home/neolight1010/.cargo/bin/rtx" hook-env -s nu
+  ^"/home/neolight1010/.cargo/bin/mise" hook-env -s nu
     | parse vars
     | update-env
 }
