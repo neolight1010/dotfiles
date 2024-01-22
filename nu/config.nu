@@ -1,6 +1,4 @@
 # Nushell Config File
-#
-# version = "0.87.1"
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
@@ -791,6 +789,6 @@ alias j = z
     direnv export json | from json | default {} | load-env
 }
 
-source "/home/neolight1010/.config/nushell/rtx.nu"
-source "/home/neolight1010/.config/nushell/zoxide.nu"
+source ~/.config/nushell/rtx.nu
+source ~/.config/nushell/zoxide.nu
 use ($nu.config-path | path dirname | path join starship.nu)
