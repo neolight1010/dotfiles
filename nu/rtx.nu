@@ -29,11 +29,11 @@ def --wrapped mise [command?: string, --help, ...rest: string] {
   } else if ($command == "activate") {
     $env.RTX_SHELL = "nu"
   } else if ($command in $commands) {
-    ^"~/.cargo/bin/mise" $command $rest
+    ^"~/.cargo/bin/mise" $command ...$rest
     | parse vars
     | update-env
   } else {
-    ^"~/.cargo/bin/mise" $command $rest
+    ^"~/.cargo/bin/mise" $command ...$rest
   }
 }
   
