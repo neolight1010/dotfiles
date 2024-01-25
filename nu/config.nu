@@ -768,6 +768,7 @@ alias gco = git checkout
 alias gd = git diff
 alias gds = git diff --staged
 alias gp = git push
+alias gpf = git push --force-with-lease
 alias gl = git pull
 alias glg = git log --stat
 alias grb = git rebase
