@@ -493,7 +493,7 @@ EOF
 " ----------------My bindings-----------------
 
 nnoremap <Leader>tn :tabnew %<CR>
-nnoremap <Leader>n <Cmd>nohlsearch\|diffupdate\|redraw<CR>
+nno remap <Leader>n <Cmd>nohlsearch\|diffupdate\|redraw<CR>
 imap kj <Esc>
 nnoremap [b <Cmd>bprevious<CR>
 nnoremap ]b <Cmd>bnext<CR>
@@ -577,5 +577,13 @@ for type, icon in pairs(signs) do
   local hl = "DiagnosticSign" .. type
   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
+
+vim.api.nvim_create_autocmd({ "VimEnter" }, {
+  callback = function (ev)
+    if vim.fn.argc() == 0 then
+      vim.cmd("Scratch")
+    end
+  end,
+})
 
 EOF
