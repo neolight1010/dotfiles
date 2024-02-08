@@ -127,7 +127,6 @@ require("lazy").setup({
   "dart-lang/dart-vim-plugin",
   "Vimjas/vim-python-pep8-indent",
   "mracos/mermaid.vim",
-  "lervag/vimtex",
   "mlaursen/vim-react-snippets", 
   {
     "evanleck/vim-svelte",
