@@ -761,6 +761,7 @@ alias g = git
 alias ga = git add
 alias gb = git branch
 alias gc = git commit
+alias gc! = git commit --amend
 alias gcmsg = git commit -m
 alias gcn = git commit --amend
 alias gcn! = git commit --amend --no-edit
