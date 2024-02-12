@@ -783,11 +783,7 @@ alias gstp = git stash pop
 
 alias j = z
 
-{ ||
-    if (which direnv | is-empty) {
-        return
-    }
-
+if (not (which direnv | is-empty)) {
     direnv export json | from json | default {} | load-env
 }
 
