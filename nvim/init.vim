@@ -448,6 +448,10 @@ require("lazy").setup({
     },
     opts = {},
   },
+  {
+      "tamton-aquib/keys.nvim",
+      cmd = "KeysToggle"
+  },
 
   {
     "folke/zen-mode.nvim",
