@@ -449,6 +449,17 @@ require("lazy").setup({
     opts = {},
   },
 
+  {
+    "folke/zen-mode.nvim",
+    opts = {},
+    cmd = { "ZenMode" },
+  },
+  {
+    "folke/twilight.nvim",
+    opts = {},
+    cmd = { "Twilight", "TwilightEnable", "TwilightDisable", "ZenMode" },
+  },
+
   -- Color schemes
   "rafi/awesome-vim-colorschemes",
   {
