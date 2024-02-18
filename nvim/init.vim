@@ -453,6 +453,7 @@ require("lazy").setup({
     "folke/zen-mode.nvim",
     opts = {},
     cmd = { "ZenMode" },
+    dependencies = { "folke/twilight.nvim" },
   },
   {
     "folke/twilight.nvim",
