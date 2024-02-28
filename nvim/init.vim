@@ -317,16 +317,11 @@ require("lazy").setup({
     ft = { "crystal" },
   },
   
-  "yuezk/vim-js",
-  "HerringtonDarkholme/yats.vim",
   "maxmellon/vim-jsx-pretty",
   "ap/vim-css-color",
-  "jxnblk/vim-mdx-js",
   "adelarsq/vim-matchit",
-  "jceb/vim-orgmode",
   "Yggdroot/indentLine",
   "purescript-contrib/purescript-vim",
-  { "nagy135/typebreak.nvim", dependencies = { "nvim-lua/plenary.nvim" } },
   {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
