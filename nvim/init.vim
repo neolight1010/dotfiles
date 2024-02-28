@@ -387,7 +387,6 @@ require("lazy").setup({
           start_jumping = "s"
         },
       })
-      require('mini.tabline').setup()
       require('mini.comment').setup()
       require('mini.cursorword').setup()
       require('mini.indentscope').setup()
@@ -399,6 +398,20 @@ require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function ()
       require("lualine").setup()
+    end,
+  },
+  {
+    "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function ()
+      require("bufferline").setup({
+        options = {
+          indicator = {
+            style = "underline",
+          },
+        },
+      })
     end,
   },
   {
