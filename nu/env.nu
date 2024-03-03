@@ -106,6 +106,7 @@ $env.EDITOR = "nvim"
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.cargo/bin")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/bin")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.local/bin")
+$env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.ghcup/bin")
 
 if (is_wsl) {
     $env.MESA_D3D12_DEFAULT_ADAPTER_NAME = NVIDIA
