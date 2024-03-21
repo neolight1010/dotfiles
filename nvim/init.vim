@@ -57,7 +57,10 @@ require("lazy").setup({
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
-    opts = {},
+    opts = {
+      check_ts = true,
+      enable_check_bracket_line = false,
+    },
   },
   "tpope/vim-sleuth",
   "jparise/vim-graphql",
