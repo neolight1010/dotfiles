@@ -499,8 +499,9 @@ require('smoothcursor').setup({
 
 ---------------Color scheme and theme configs-------------
 vim.opt.background = "dark"
-vim.cmd.colorscheme("yellow-moon")
+vim.cmd.colorscheme("challenger_deep")
 vim.opt.termguicolors = true
+vim.cmd("highlight LineNr guifg=white")
 
 -------------- DBUI -----------------
 vim.g.db_ui_use_nerd_fonts = 1
