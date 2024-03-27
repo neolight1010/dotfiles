@@ -499,7 +499,7 @@ require('smoothcursor').setup({
 
 ---------------Color scheme and theme configs-------------
 vim.opt.background = "dark"
-vim.cmd.colorscheme("tokyonight-night")
+vim.cmd.colorscheme("yellow-moon")
 vim.opt.termguicolors = true
 
 -------------- DBUI -----------------
