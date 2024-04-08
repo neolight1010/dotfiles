@@ -7,3 +7,6 @@ line-number = "relative"
 normal = "block"
 insert = "bar"
 select = "underline"
+
+[keys.insert]
+k = { j = "normal_mode" }
