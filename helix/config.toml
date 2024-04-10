@@ -8,5 +8,8 @@ normal = "block"
 insert = "bar"
 select = "underline"
 
+[editor.whitespace]
+render = "all"
+
 [keys.insert]
 k = { j = "normal_mode" }
