@@ -2,6 +2,9 @@ theme = "snazzy"
 
 [editor]
 line-number = "relative"
+cursorline = true
+color-modes = true
+popup-border = "all"
 
 [editor.cursor-shape]
 normal = "block"
