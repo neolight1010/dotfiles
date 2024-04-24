@@ -4,7 +4,7 @@
 	email = neolight1010@gmail.com
 
 [core]
-	excludesfile = /home/neolight1010/.config/git/global.gitignore
+	excludesfile = ~/dotfiles/git/global.gitignore
 	pager = delta
 
 [interactive]
