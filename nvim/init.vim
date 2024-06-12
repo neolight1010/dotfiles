@@ -589,6 +589,7 @@ vim.keymap.set("n", "]t", "<Cmd>tabnext<CR>");
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
+    vim.keymap.set('n', '<Space>k', vim.lsp.buf.hover, { buffer = args.buf })
     vim.keymap.set('n', '<Space>r', vim.lsp.buf.rename, { buffer = args.buf })
 
     vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
