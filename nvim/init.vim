@@ -252,13 +252,11 @@ require("lazy").setup({
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "buffer" },
-          { name = "copilot" },
           { name = "nvim_lsp_signature_help" },
         }),
         formatting = {
           format = require("lspkind").cmp_format({
             mode = "symbol_text",
-            symbol_map = { Copilot = "" },
           }),
         }
       })
@@ -284,26 +282,7 @@ require("lazy").setup({
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
       "hrsh7th/cmp-nvim-lsp-signature-help",
-      {
-        "zbirenbaum/copilot-cmp",
-        config = function()
-          require("copilot_cmp").setup()
-        end,
-        dependencies = {
-          {
-            "zbirenbaum/copilot.lua",
-            cmd = "Copilot",
-            event = "InsertEnter",
-            config = function ()
-              require("copilot").setup({
-                suggestion = { enabled = false },
-                panel = { enabled = false },
-              })
-            end,
-          },
-          "onsails/lspkind.nvim",
-        },
-      },
+      "onsails/lspkind.nvim",
     },
   },
 
