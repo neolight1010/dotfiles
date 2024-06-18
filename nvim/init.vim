@@ -335,7 +335,6 @@ require("lazy").setup({
   "tpope/vim-repeat",
   "tpope/vim-dadbod",
   "kristijanhusak/vim-dadbod-ui",
-  "gen740/SmoothCursor.nvim",
   {
     "Olical/conjure",
     ft = { "clojure" },
@@ -468,13 +467,6 @@ require("lazy").setup({
 })
 
 vim.g.colorscheme_switcher_define_mappings = 0
-
--------------SmoothCursor-------------
-require('smoothcursor').setup({
-  fancy = {
-      enable = true,
-  }
-})
 
 ---------------Color scheme and theme configs-------------
 vim.opt.background = "dark"
