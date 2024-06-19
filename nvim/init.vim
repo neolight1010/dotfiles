@@ -361,7 +361,6 @@ require("lazy").setup({
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function ()
       require('mini.files').setup()
-      require('mini.animate').setup()
       require("mini.jump").setup()
       require("mini.jump2d").setup({
         mappings = {
