@@ -70,7 +70,7 @@ require("lazy").setup({
     config = function ()
     require("gitsigns").setup({
       numhl = true,
-      word_diff = true,
+      word_diff = false,
       current_line_blame = true,
       on_attach = function (bufnr)
         local gs = package.loaded.gitsigns
