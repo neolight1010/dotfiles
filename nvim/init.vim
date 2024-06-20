@@ -388,7 +388,6 @@ require("lazy").setup({
       require("bufferline").setup({
         options = {
           indicator = {
-            style = "underline",
           },
         },
       })
