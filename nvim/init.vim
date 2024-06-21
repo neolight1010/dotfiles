@@ -63,8 +63,6 @@ require("lazy").setup({
     },
   },
   "tpope/vim-sleuth",
-  "jparise/vim-graphql",
-  "neoclide/jsonc.vim",
   {
     "lewis6991/gitsigns.nvim",
     config = function ()
@@ -126,14 +124,6 @@ require("lazy").setup({
       end,
     })
     end,
-  },
-  "dart-lang/dart-vim-plugin",
-  "Vimjas/vim-python-pep8-indent",
-  "mracos/mermaid.vim",
-  "mlaursen/vim-react-snippets", 
-  {
-    "evanleck/vim-svelte",
-    branch = "main",
   },
   {
     "mhartington/formatter.nvim",
@@ -294,16 +284,20 @@ require("lazy").setup({
       require("metals").initialize_or_attach({})
     end,
   },
+
   {
-    "vim-crystal/vim-crystal",
-    ft = { "crystal" },
+    "maxmellon/vim-jsx-pretty",
+    ft = { "javascriptreact", "typescriptreact" },
+  },
+  "ap/vim-css-color",
+  "adelarsq/vim-matchit", -- TODO How useful is this plugin?
+  "Yggdroot/indentLine", -- TODO Lua alternative?
+  
+  {
+    "purescript-contrib/purescript-vim",
+    ft = { "purescript" },
   },
   
-  "maxmellon/vim-jsx-pretty",
-  "ap/vim-css-color",
-  "adelarsq/vim-matchit",
-  "Yggdroot/indentLine",
-  "purescript-contrib/purescript-vim",
   {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
@@ -332,9 +326,11 @@ require("lazy").setup({
       })
     end
   },
+
   "tpope/vim-repeat",
   "tpope/vim-dadbod",
   "kristijanhusak/vim-dadbod-ui",
+ 
   {
     "Olical/conjure",
     ft = { "clojure" },
