@@ -551,9 +551,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = args.buf })
     vim.keymap.set('n', '<Space>k', vim.lsp.buf.hover, { buffer = args.buf })
     vim.keymap.set('n', '<Space>r', vim.lsp.buf.rename, { buffer = args.buf })
-
-    vim.keymap.set('n', '<Leader>ca', vim.lsp.buf.code_action, { buffer = args.buf })
-    vim.keymap.set('v', '<Leader>c', vim.lsp.buf.code_action, { buffer = args.buf })
+    vim.keymap.set('n', '<Space>a', vim.lsp.buf.code_action, { buffer = args.buf })
+    vim.keymap.set('v', '<Space>a', vim.lsp.buf.code_action, { buffer = args.buf })
 
     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { buffer = args.buf })
     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { buffer = args.buf })
