@@ -101,7 +101,7 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
-$env.EDITOR = "nvim"
+$env.EDITOR = "hx"
 
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.cargo/bin")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/bin")
