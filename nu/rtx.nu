@@ -25,15 +25,15 @@ def --wrapped mise [command?: string, --help, ...rest: string] {
   let commands = ["shell", "deactivate"]
   
   if ($command == null) {
-    ^"~/.cargo/bin/mise"
+    ~/.cargo/bin/mise
   } else if ($command == "activate") {
     $env.RTX_SHELL = "nu"
   } else if ($command in $commands) {
-    ^"~/.cargo/bin/mise" $command ...$rest
+    ~/.cargo/bin/mise $command ...$rest
     | parse vars
     | update-env
   } else {
-    ^"~/.cargo/bin/mise" $command ...$rest
+    ~/.cargo/bin/mise $command ...$rest
   }
 }
   
@@ -48,7 +48,7 @@ def --env "update-env" [] {
 }
   
 def --env rtx_hook [] {
-  ^"~/.cargo/bin/mise" hook-env -s nu
+  ~/.cargo/bin/mise hook-env -s nu
     | parse vars
     | update-env
 }
