@@ -18,6 +18,3 @@ tab = "all"
 nbsp = "all"
 nnbsp = "all"
 newline = "all"
-
-[keys.insert]
-k = { j = "normal_mode" }
