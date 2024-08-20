@@ -12,5 +12,6 @@ config.font = wezterm.font("GohuFont uni14 Nerd Font Mono")
 config.font_size = 16
 
 config.window_close_confirmation = 'NeverPrompt'
+config.hide_mouse_cursor_when_typing = false
 
 return config
