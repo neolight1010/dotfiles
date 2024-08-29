@@ -18,3 +18,7 @@ tab = "all"
 nbsp = "all"
 nnbsp = "all"
 newline = "all"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "read-only-indicator", "file-modification-indicator", "spacer", "version-control"]
+right = ["diagnostics", "selections", "register", "position", "file-line-ending", "file-type"]
