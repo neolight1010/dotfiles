@@ -1,3 +1,13 @@
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+environment = { "RUFF_TRACE" = "messages" }
+
+[language-server.ruff.config.settings]
+logLevel = "debug"
+
 [[language]]
 name = "python"
-language-servers = ["pyright"]
+language-servers = ["pyright", "ruff"]
+auto-format = true
+
