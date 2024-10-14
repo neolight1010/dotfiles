@@ -772,6 +772,7 @@ alias gpf = git push --force-with-lease
 alias gl = git pull
 alias glg = git log --stat
 alias grb = git rebase
+alias grbc = git rebase --continue
 alias grs = git restore
 alias grst = git restore --staged
 alias gsh = git show
