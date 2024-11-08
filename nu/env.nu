@@ -110,5 +110,5 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.ghcup/bi
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.local/share/coursier/bin")
 
 if (is_wsl) {
-    $env.MESA_D3D12_DEFAULT_ADAPTER_NAME = NVIDIA
+    $env.MESA_D3D12_DEFAULT_ADAPTER_NAME = "NVIDIA"
 }
