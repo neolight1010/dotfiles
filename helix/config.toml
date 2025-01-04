@@ -7,6 +7,10 @@ color-modes = true
 popup-border = "all"
 true-color = true
 rulers = [80]
+end-of-line-diagnostics = "hint"
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
 
 [editor.lsp]
 display-inlay-hints = true
