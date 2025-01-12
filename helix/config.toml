@@ -13,7 +13,7 @@ end-of-line-diagnostics = "hint"
 cursor-line = "hint"
 
 [editor.lsp]
-display-inlay-hints = true
+display-inlay-hints = false
  
 [editor.cursor-shape]
 normal = "block"
