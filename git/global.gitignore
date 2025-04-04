@@ -6,3 +6,4 @@
 .ignore
 .envrc
 *.local.*
+justfile
