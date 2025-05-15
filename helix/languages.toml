@@ -54,7 +54,7 @@ language-servers = ["deno-lsp"]
 name = "json"
 roots = ["deno.json", "deno.jsonc", "package.json"]
 auto-format = true
-language-servers = ["deno-lsp"]
+language-servers = ["deno-lsp", { name = "vscode-json-language-server", except-features = [ "format" ] }]
 
 [language-server.deno-lsp]
 command = "deno"
