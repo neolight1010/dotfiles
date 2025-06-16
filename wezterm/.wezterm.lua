@@ -7,8 +7,8 @@ if wezterm.config_builder then
 end
 
 config.color_scheme = 'X::DotShare (terminal.sexy)'
-config.window_decorations = 'RESIZE'
-config.font = wezterm.font("GohuFont uni14 Nerd Font Mono")
+config.window_decorations = 'TITLE | RESIZE'
+config.font = wezterm.font("BlexMono Nerd Font Mono")
 config.font_size = 16
 config.window_close_confirmation = 'NeverPrompt'
 config.hide_mouse_cursor_when_typing = false
