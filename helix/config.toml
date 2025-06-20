@@ -9,6 +9,9 @@ true-color = true
 rulers = [80]
 end-of-line-diagnostics = "hint"
 
+[editor.indent-guides]
+render = true
+
 [editor.inline-diagnostics]
 cursor-line = "hint"
 
