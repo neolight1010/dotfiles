@@ -760,6 +760,7 @@ alias gcmsg! = git commit --no-verify -m
 alias gcn = git commit --amend
 alias gcn! = git commit --amend --no-edit
 alias gco = git checkout
+alias gcp = git cherry-pick
 alias gd = git diff
 alias gds = git diff --staged
 alias gf = git fetch
