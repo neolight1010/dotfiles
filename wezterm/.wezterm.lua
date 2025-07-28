@@ -9,7 +9,7 @@ end
 config.color_scheme = 'Aura (Gogh)'
 config.window_decorations = 'TITLE | RESIZE'
 config.font = wezterm.font("BlexMono Nerd Font Mono")
-config.font_size = 16
+config.font_size = 14
 config.window_close_confirmation = 'NeverPrompt'
 config.hide_mouse_cursor_when_typing = false
 config.hide_tab_bar_if_only_one_tab = true
