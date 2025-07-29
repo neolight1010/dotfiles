@@ -2,6 +2,7 @@
 
 exec --no-startup-id xrandr --output eDP --mode 1280x720 --below HDMI-1-0 --output HDMI-1-0 --mode 1920x1080
 exec --no-startup-id /usr/lib/gsd-xsettings
+exec --no-startup-id nitrogen --restore
 
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl --min-val=2 -q set 3%-
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl -q set 3%+
