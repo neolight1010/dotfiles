@@ -1,0 +1,12 @@
+#!/bin/sh
+
+CHOSEN=$(printf "Lock\nSuspend\nReboot\nShutdown\nLog Out" | rofi -dmenu)
+
+case "$CHOSEN" in
+	"Lock") dm-tool lock ;;
+	"Suspend") systemctl suspend-then-hibernate ;;
+	"Reboot") reboot ;;
+	"Shutdown") poweroff ;;
+	"Log Out") i3-msg exit ;;
+	*) exit 1 ;;
+esac
