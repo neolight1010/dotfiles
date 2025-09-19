@@ -766,6 +766,7 @@ alias gds = git diff --staged
 alias gf = git fetch
 alias gm = git merge
 alias gp = git push
+alias gp! = git push --no-verify
 alias gpf = git push --force-with-lease
 alias gl = git pull
 alias glg = git log --stat
