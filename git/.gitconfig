@@ -25,3 +25,6 @@
 
 [includeIf "gitdir:~/dev/devsu/"]
 	path = ~/dev/devsu/.gitconfig
+
+[rerere]
+	enabled = true
