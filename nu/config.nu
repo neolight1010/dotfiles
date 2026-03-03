@@ -769,6 +769,7 @@ alias gm = git merge
 alias gp = git push
 alias gp! = git push --no-verify
 alias gpf = git push --force-with-lease
+alias gpf! = git push --force-with-lease --no-verify
 alias gpuc = git push -u origin (git branch --show-current | str trim) # "git push upstream current"
 alias gpuc! = git push -u --no-verify origin (git branch --show-current | str trim) # "git push upstream current"
 alias gl = git pull
