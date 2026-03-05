@@ -753,6 +753,7 @@ $env.config = {
 alias g = git
 alias ga = git add
 alias gb = git branch
+alias gbdm = do { gb --merged | lines | each {|l| $l | str trim} | where {|l| not ("main" in $l)} | each {|l| gb -d $l} }
 alias gc = git commit
 alias gc! = git commit --amend
 alias gcmsg = git commit -m
