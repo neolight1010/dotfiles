@@ -793,6 +793,6 @@ if (not (which direnv | is-empty)) {
     direnv export json | from json | default {} | load-env
 }
 
-source ~/.config/nushell/rtx.nu
+source ~/.config/nushell/mise.nu
 source ~/.config/nushell/zoxide.nu
 use ($nu.config-path | path dirname | path join starship.nu)
