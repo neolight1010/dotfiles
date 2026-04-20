@@ -796,3 +796,6 @@ if (not (which direnv | is-empty)) {
 source ~/.config/nushell/mise.nu
 source ~/.config/nushell/zoxide.nu
 use ($nu.config-path | path dirname | path join starship.nu)
+if ($"($nu.cache-dir)/carapace.nu" | path exists) {
+    source $"($nu.cache-dir)/carapace.nu"
+}

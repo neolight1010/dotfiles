@@ -112,3 +112,8 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.local/sh
 if (is_wsl) {
     $env.MESA_D3D12_DEFAULT_ADAPTER_NAME = "NVIDIA"
 }
+
+# Carapace
+if (not (which carapace | is-empty)) {
+    $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+}
