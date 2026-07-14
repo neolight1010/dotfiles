@@ -6,7 +6,7 @@ if wezterm.config_builder then
     config = wezterm.config_builder()
 end
 
-config.color_scheme = 'Aura (Gogh)'
+config.color_scheme = 'Catppuccin Mocha'
 config.window_decorations = 'TITLE | RESIZE'
 config.font = wezterm.font("BlexMono Nerd Font Mono")
 config.font_size = 13
