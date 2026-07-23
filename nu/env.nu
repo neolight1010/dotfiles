@@ -108,6 +108,7 @@ $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/bin")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.local/bin")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.ghcup/bin")
 $env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.local/share/coursier/bin")
+$env.PATH = ($env.PATH | split row (char esep) | prepend $"($env.HOME)/.opencode/bin")
 
 if (is_wsl) {
     $env.MESA_D3D12_DEFAULT_ADAPTER_NAME = "NVIDIA"
