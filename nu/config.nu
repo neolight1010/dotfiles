@@ -789,6 +789,10 @@ alias gstp = git stash pop
 
 alias j = z
 
+def clip-format-json [] {
+    wl-paste | jq | wl-copy
+}
+
 if (not (which direnv | is-empty)) {
     direnv export json | from json | default {} | load-env
 }
